@@ -1,5 +1,5 @@
 # What's In The Chul-Gabang
-철가방속 물건 맞추기 FrontEnd 레포지토리입니다💕
+철가방속 물건 맞추기 게임 띵호와 FrontEnd 레포지토리입니다💕
 
 ## 🌱 Commit Convention
 
