@@ -1,7 +1,64 @@
-# Dding-Ho-Wa
- 띵호와 FrontEnd 레포지토리입니다💕
+<h1 align="center">우리FISA - Frontend Toy Project</h1>
+<br>
+<br>
+<br>
+<br>
 
-## 🌱 Commit Convention
+# Frontend-1st-Dding-Ho-Wa
+
+## 👻 팀 소개
+|--------------------------------------|---------------------------------------|------------------------------------|
+| ![cy](https://avatars.githubusercontent.com/u/94633589?v=4)| ![sj](https://github.com/sengjun0624) | ![sy](https://avatars.githubusercontent.com/u/87513664?v=4) |
+|--------------------------------------|---------------------------------------|------------------------------------|
+| [서채연](https://github.com/seocylucky)| [이승준](https://github.com/sengjun0624) | [이소연](https://github.com/reed426) |
+| 팀장<br>HTML<br>Figma<br>CSS<br>GitHub세팅 | 팀원<br>HTML<br>CSS<br>README        | 팀원<br>HTML<br>CSS<br>Figma        |
+
+| ![sb](https://github.com/HwangSunBeom) | ![jy](https://github.com/apple6346654) | ![kh](https://github.com/kh-0818) |
+|----------------------------------------|----------------------------------------|-----------------------------------|
+
+<br>
+
+## 🖥️ 데모 링크 / 시연 영상
+
+- [라이브 데모](https://woorifisa-service-dev-4th.github.io/frontend-1st-dding-ho-wa/)
+- 데스크탑
+영상 링크
+- 모바일
+링크
+
+<br>
+
+## 🍦 서비스 소개
+
+우리FISA 클라우드 서비스 개발 교과과정 토이 프로젝트로, <br>
+HTML, CSS를 활용한 철가방 속 물건 맞추기 게임입니다.
+
+<br>
+
+## 💻 주요 코드
+
+### HTML
+- container, content로 구조적으로 잘 갖춰진 문서
+- 추후에 컴포넌트 분리를 고려하여 작성한 HTML 문서
+- 오디오를 활용해 게임의 몰입증가
+
+
+### CSS
+- 반응형 스타일을 적용하여 다양한 접속 환경에서 사용 가능
+- 다양한 애니메이션을 활용해 시각적 재미 요소 추가
+
+
+<br>
+
+## 🚧 프로젝트 룰
+
+-   <h3>Color 🖍️ - 포켓몬 게임의 레트로 컬러를 살린 색 사용</h3>
+      <img width="990" alt="Color" src="https://github.com/user-attachments/assets/79c5422b-fd13-4bbf-984e-0404b1bdda0f">
+      
+
+<br>
+
+### 🌱 Commit Convention
 
 - 커밋 메시지 규칙
   - `commit convention`: `commit message`
@@ -21,7 +78,7 @@
 | chore    | 빌드 업무 수정, 패키지 매니저 수정, 패키지 관리자 구성 등 업데이트, Production Code 변경 없음 |
 | hotfix   | 급하게 치명적인 버그를 고쳐야하는 경우                                                        |
 
-## 🪵 Branch Convention
+### 🪵 Branch Convention
 
 - Issue를 생성한다. (작업의 단위, 번호 부여)
 - Issue의 Feature Branch를 생성한다.
@@ -32,7 +89,7 @@
 - Code Review가 완료되고, 다른 팀원이 Approve하면 Merge Pull Request 진행
 - 다른 팀원은 merge된 작업물을 pull하고 다시 각자 맡은 작업을 이어나간다.
 
-## Class Name Rule 📌 - 원만한 협업을 위한 클래스네이밍 규칙 적용
+### Class Name Rule 📌 - 원만한 협업을 위한 클래스네이밍 규칙 적용
 
 - 레이아웃(align / position) : layout_{ }
 - 컨테이너(wrapper) : container_{ }
@@ -41,3 +98,34 @@
 - 글꼴색 : font_color_{ }
 - 배경색 : bg_color_{ }
 - 구분선 : line
+<br>
+
+## 🤖 Prototype
+
+### Main Page
+
+![main_image](https://github.com/user-attachments/assets/d7981c8b-5695-4796-9d49-ccc5d090b41a)
+
+
+<br>
+
+### Play Page
+
+![Play](https://github.com/user-attachments/assets/aff491f2-5a83-4b47-a346-487be101d725)
+
+<br>
+
+## 🤯 회고
+
+
+
+<!-- ## Lighthouse
+
+### 개선 전
+
+<img src="./src/img/lighthouse1.png" width="600" height="600"/>
+<br>
+
+### 개선 후
+
+<img src="./src/img/lighthouse2.png" width="600" height="600"/> -->
