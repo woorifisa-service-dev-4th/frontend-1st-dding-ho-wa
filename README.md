@@ -12,7 +12,7 @@
 |--------------------------------------|---------------------------------------|------------------------------------|
 | [서채연](https://github.com/seocylucky)| [이승준](https://github.com/sengjun0624) | [이소연](https://github.com/reed426) |
 | 팀장<br>HTML<br>Figma<br>CSS<br>GitHub세팅 | 팀원<br>HTML<br>CSS<br>README        | 팀원<br>HTML<br>CSS<br>Figma        |
-|----------------------------------------|----------------------------------------|-----------------------------------|
+
 
 <br>
 
@@ -48,13 +48,24 @@ HTML, CSS를 활용한 철가방 속 물건 맞추기 게임입니다.
 
 <br>
 
-## 🚧 프로젝트 룰
-
--   <h3>Color 🖍️ - 포켓몬 게임의 레트로 컬러를 살린 색 사용</h3>
-      <img width="990" alt="Color" src="https://github.com/user-attachments/assets/79c5422b-fd13-4bbf-984e-0404b1bdda0f">
-      
+## Font
+### Font서체
+- 레트로한 느낌과 철가방 컨셉에 맞는 폰트 선정
+![윤독립체](https://noonnu.cc/font_page/338)
+![띵호와](https://github.com/user-attachments/assets/526049b5-fd84-4b06-bbf2-a7e96d1cca7a)
 
 <br>
+
+### Font 사이즈
+
+<br>
+
+## 🚧 프로젝트 룰
+
+-   <h3>Color 🖍️ - 철가방 게임의 동양풍 컬러를 살린 색 사용</h3>
+      <img width="990" alt="Color" src="https://github.com/user-attachments/assets/79c5422b-fd13-4bbf-984e-0404b1bdda0f">
+<br>
+
 
 ### 🌱 Commit Convention
 
@@ -106,13 +117,10 @@ HTML, CSS를 활용한 철가방 속 물건 맞추기 게임입니다.
 
 
 <br>
-![게임 화면(입력)](https://github.com/user-attachments/assets/1f1325d2-031c-471a-823a-ceeecff3d201)
-
 
 ### Play Page
 
-![Play](https://github.com/user-attachments/assets/aff491f2-5a83-4b47-a346-487be101d725)
-
+![게임 화면(입력)](https://github.com/user-attachments/assets/1f1325d2-031c-471a-823a-ceeecff3d201)
 <br>
 
 ## 🤯 회고
