@@ -119,9 +119,10 @@ HTML, CSS를 활용한 철가방 속 물건 맞추기 게임입니다.
 
 <br>
 
-### Play Page
+### Play 
 
-![게임 화면(입력)](https://github.com/user-attachments/assets/1f1325d2-031c-471a-823a-ceeecff3d201)
+![플레이 화면](htps://github.com/user-attachments/assets/42350feb-e51b-4873-8b90-88e0b9980302)
+
 <br>
 
 ## 🤯 회고
