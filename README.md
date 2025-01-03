@@ -47,9 +47,9 @@ HTML, CSS를 활용한 철가방 속 물건 맞추기 게임입니다.
 
 <br>
 
-## Font
+## Font 
 ### Font서체
-- 레트로한 느낌과 철가방 컨셉에 맞는 폰트 선정
+#### 독립체 - 레트로한 느낌과 철가방 컨셉에 맞는 폰트 선정
   
 <br>
 
@@ -57,14 +57,14 @@ HTML, CSS를 활용한 철가방 속 물건 맞추기 게임입니다.
 
 <br>
 
-### Font 사이즈
-
 <br>
 
 ## 🚧 프로젝트 룰
 
 -   <h3>Color 🖍️ - 철가방 게임의 동양풍 컬러를 살린 색 사용</h3>
-      <img width="990" alt="Color" src="https://github.com/user-attachments/assets/79c5422b-fd13-4bbf-984e-0404b1bdda0f">
+      <img width="990" alt="Color" src="https://github.com/user-attachments/assets/bc8a42ba-eb3c-4109-9562-4f3a89d5caae">
+    
+
 <br>
 
 
@@ -119,9 +119,10 @@ HTML, CSS를 활용한 철가방 속 물건 맞추기 게임입니다.
 
 <br>
 
-### Play Page
+### Play 
 
-![게임 화면(입력)](https://github.com/user-attachments/assets/1f1325d2-031c-471a-823a-ceeecff3d201)
+![play Image](https://github.com/user-attachments/assets/d50a0f6a-67e4-4fb8-927f-09f423aaa812)
+
 <br>
 
 ## 🤯 회고

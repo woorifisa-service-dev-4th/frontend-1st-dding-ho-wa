@@ -14,6 +14,26 @@
     <audio autoplay>
       <source src="./audio/homeBGM.mp3" type="audio/mpeg" />
     </audio>
+
+    <input type="checkbox" id="show-modal" style="display: none" />
+
+    <div class="container_overlay"></div>
+      <div class="container_modal">
+        <div class="container_modal_content">
+          <div class="text_description">게임 설명</div>
+          <div>
+            <p class="text_content_01">1. 시작하기를 누르자마자 철가방이 열렸다 닫히게 됩니다.</p>
+            <p class="text_content_02">2. 제한시간 5초안에 철가방 속 문제를 맞춰보세요.</p>
+            <p class="text_content_03">3. 문제는 총 10문제 입니다.</p>
+          </div>
+          
+          <a href="./game.html">
+            <button class="btn_game_start">게임 시작</button>
+          </a>
+        </div>
+      </div>
+
+    <div>
     <div class="container_warning">
       <div class="text_warning">1090px 이상 해상도만 이용 가능합니다✨🌈</div>
     </div>
@@ -36,13 +56,11 @@
           <div class="container_home_start_animation">
             <img src="./img/bagTop.svg" alt="철가방 뚜껑" class="img_bag_top" />
             <span class="text_home_01">띵호와</span>
-            <a href="./game.html" class="start_link_home">
-              <button class="start_button_home">게임 시작</button>
-            </a>
+            <label for="show-modal" class="start_button_home">게임 설명</label>
           </div>
         </div>
         <div class="container_right">
-          <img src="./img/home/right.svg" alt="오른쪽 용" class="img_right" />
+          <img src="./img/home/right.svg" alt="오른쪽  용" class="img_right" />
         </div>
       </div>
     </div>
