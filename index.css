@@ -100,12 +100,18 @@ body {
   border-radius: 40px;
   cursor: pointer;
   font-size: 1.3vw;
-  font-weight: bold;
+  font-weight: bolder;
   transition: background-color 0.3s ease;
   z-index: 10;
-  width: 8vw;
-  height: 5vw;
-  min-height: 3vw;
+  width: 10vw; /* 고정 너비 */
+  height: 4vw; /* 고정 높이 */
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: normal;
+  padding: 0.5vw; 
 }
 
 .start_button_home:hover {
@@ -130,4 +136,77 @@ body {
   src: url("./font/YoonDokrip.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+
+.container_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.container_modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 70%;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px r gba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.container_overlay,
+.container_modal {
+  display: none;
+}
+
+#show-modal:checked ~ .container_overlay,
+#show-modal:checked ~ .container_modal {
+  display: block;
+}
+
+input[type="checkbox"]:checked + label {
+  color: green;
+  font-weight: bold;
+}
+
+.container_modal_content {
+  text-align: center;
+}
+
+.btn_game_start{
+  cursor: pointer;
+  background-color: #fcc338;
+  color: #000000;
+  width: 120px;
+  height: 64px;
+  border: none;
+  margin-top: 50px;
+  margin-bottom: 2rem;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 52px;
+  box-shadow: 4px 4px 5px 2px rgba(0, 0, 0, 0.25);
+}
+
+.text_description{
+  font-size: 60px;
+  font-weight: 400;
+  font-family: Yoon독립체;
+  margin-top:2rem;
+  margin-bottom: 3rem;
+}
+
+.text_content_01, .text_content_02, .text_content_03{
+  font-family: Yoon독립체;
+  font-size: 25px;
+  margin-top:1rem;
+  margin-bottom: 2rem;
+  font-weight: lighter;
 }
