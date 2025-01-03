@@ -129,13 +129,10 @@ HTML, CSS를 활용한 철가방 속 물건 맞추기 게임입니다.
 
 
 
-<!-- ## Lighthouse
+## Lighthouse
 
 ### 개선 전
+![image](https://github.com/user-attachments/assets/19cbe7ed-1218-4159-8762-a079c621287d)
 
-<img src="./src/img/lighthouse1.png" width="600" height="600"/>
 <br>
 
-### 개선 후
-
-<img src="./src/img/lighthouse2.png" width="600" height="600"/> -->
