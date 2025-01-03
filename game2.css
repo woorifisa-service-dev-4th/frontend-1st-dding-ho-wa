@@ -21,6 +21,32 @@
   }
 }
 
+.container_background {
+  display: none;
+}
+
+@media (min-width: 1090px) {
+  .container_background {
+    display: block;
+  }
+
+  .container_warning {
+    display: none;
+  }
+}
+
+@media (max-width: 1089px) {
+  .text_warning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-size: 2rem;
+    color: #000000;
+  }
+}
+
 .container_bag_quiz_content {
   position: absolute;
   width: 55%;
@@ -215,6 +241,40 @@ input[type="checkbox"]:checked + label {
 hr {
   margin-top: 30px;
   border: 1px solid #000000;
+}
+
+@media (max-width: 1399px) and (min-width: 1080px) {
+  .layout_content .text_quiz_title {
+    font-size: 50px;
+  }
+
+  .layout_content input {
+    font-size: 28px;
+    width: 440px;
+  }
+  .timer {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 1079px) {
+  .layout_content .text_quiz_title {
+    font-size: 40px;
+  }
+
+  .layout_content input {
+    font-size: 18px;
+    width: 340px;
+  }
+  .timer {
+    width: 100px;
+    height: 100px;
+  }
+
+  .btn_submit {
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 768px) {
