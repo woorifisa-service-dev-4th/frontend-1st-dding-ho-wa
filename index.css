@@ -73,7 +73,12 @@ html, body {
     align-items: center;
     animation: slideDown 1.5s ease forwards;
 }
-
+.start_link_home {
+    text-decoration: none; /* 링크 스타일 제거 */
+    display: flex; /* 버튼을 감싸는 링크도 정렬에 포함 */
+    justify-content: center;
+    align-items: center;
+}
 .text_home_01 {
     position: relative;
     top: 25%;
@@ -99,7 +104,6 @@ html, body {
     width: 8vw;
     height: 5vw;
     min-height: 3vw;
-
 }
 
 .start_button_home:hover {
