@@ -8,7 +8,7 @@ html, body {
 .img_left_light, .img_left_dragon {
     height: 50%;
     margin-bottom: -15%;
-    display: block; /* 이미지가 inline-block 공간을 차지하지 않도록 설정 */
+    display: block;
 }
 .img_left_light {
     width:22vw;
@@ -74,8 +74,8 @@ html, body {
     animation: slideDown 1.5s ease forwards;
 }
 .start_link_home {
-    text-decoration: none; /* 링크 스타일 제거 */
-    display: flex; /* 버튼을 감싸는 링크도 정렬에 포함 */
+    text-decoration: none;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -91,7 +91,6 @@ html, body {
 .start_button_home {
     position: absolute;
     top: 85%;
-    /*padding: 10px 20px;*/
     background-color: #FCC338;
     color: black;
     border: none;
