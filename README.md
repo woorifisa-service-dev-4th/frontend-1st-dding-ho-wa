@@ -50,6 +50,9 @@ HTML, CSS를 활용한 철가방 속 물건 맞추기 게임입니다.
 ## Font
 ### Font서체
 - 레트로한 느낌과 철가방 컨셉에 맞는 폰트 선정
+  
+<br>
+
 [![띵호와](https://github.com/user-attachments/assets/526049b5-fd84-4b06-bbf2-a7e96d1cca7a)](https://noonnu.cc/font_page/338#google_vignette)
 
 <br>
