@@ -8,12 +8,10 @@
 
 ## 👻 팀 소개
 |--------------------------------------|---------------------------------------|------------------------------------|
-| ![cy](https://avatars.githubusercontent.com/u/94633589?v=4)| ![sj](https://github.com/sengjun0624) | ![sy](https://avatars.githubusercontent.com/u/87513664?v=4) |
+| ![cy](https://avatars.githubusercontent.com/u/94633589?v=4)| ![sj](https://avatars.githubusercontent.com/u/105282117?v=4) | ![sy](https://avatars.githubusercontent.com/u/87513664?v=4) |
 |--------------------------------------|---------------------------------------|------------------------------------|
 | [서채연](https://github.com/seocylucky)| [이승준](https://github.com/sengjun0624) | [이소연](https://github.com/reed426) |
 | 팀장<br>HTML<br>Figma<br>CSS<br>GitHub세팅 | 팀원<br>HTML<br>CSS<br>README        | 팀원<br>HTML<br>CSS<br>Figma        |
-
-| ![sb](https://github.com/HwangSunBeom) | ![jy](https://github.com/apple6346654) | ![kh](https://github.com/kh-0818) |
 |----------------------------------------|----------------------------------------|-----------------------------------|
 
 <br>
@@ -108,6 +106,8 @@ HTML, CSS를 활용한 철가방 속 물건 맞추기 게임입니다.
 
 
 <br>
+![게임 화면(입력)](https://github.com/user-attachments/assets/1f1325d2-031c-471a-823a-ceeecff3d201)
+
 
 ### Play Page
 
