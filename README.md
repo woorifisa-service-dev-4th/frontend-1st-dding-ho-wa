@@ -31,3 +31,13 @@
 - Pull Request가 작성되면 다른 팀원이 Code Review를 한다.
 - Code Review가 완료되고, 다른 팀원이 Approve하면 Merge Pull Request 진행
 - 다른 팀원은 merge된 작업물을 pull하고 다시 각자 맡은 작업을 이어나간다.
+
+## Class Name Rule 📌 - 원만한 협업을 위한 클래스네이밍 규칙 적용
+
+- 레이아웃(align / position) : layout_{ }
+- 컨테이너(wrapper) : container_{ }
+- 글꼴 : text_{ }
+- 이미지 : img_{ }
+- 글꼴색 : font_color_{ }
+- 배경색 : bg_color_{ }
+- 구분선 : line
