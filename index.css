@@ -6,6 +6,32 @@ body {
   height: 100%;
 }
 
+.container_home {
+  display: none;
+}
+
+@media (min-width: 1090px) {
+  .container_home {
+    display: block;
+  }
+
+  .container_warning {
+    display: none;
+  }
+}
+
+@media (max-width: 1089px) {
+  .text_warning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-size: 2rem;
+    color: #000000;
+  }
+}
+
 .img_left_light,
 .img_left_dragon {
   height: 50%;
