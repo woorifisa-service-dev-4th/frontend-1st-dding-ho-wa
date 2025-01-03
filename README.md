@@ -1,4 +1,4 @@
-![띵호와](https://github.com/user-attachments/assets/610a6880-d005-44a4-8eeb-b8d72da89b9b)<h1 align="center">우리FISA - Frontend Toy Project</h1>
+<h1 align="center">우리FISA - Frontend Toy Project</h1>
 <br>
 <br>
 <br>
