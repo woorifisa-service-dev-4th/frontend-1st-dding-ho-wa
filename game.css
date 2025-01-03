@@ -218,11 +218,11 @@ hr {
 
 @media (max-width: 768px) {
   .text_receipt {
-    font-size: 6vw; /* 작은 화면에서는 텍스트 크기 감소 */
+    font-size: 6vw;
   }
 
   .text_thank_msg {
-    font-size: 6vw; /* 작은 화면에서는 텍스트 크기 감소 */
+    font-size: 6vw;
   }
 
   .text_total {
