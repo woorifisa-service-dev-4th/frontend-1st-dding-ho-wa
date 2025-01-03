@@ -18,10 +18,9 @@
 ## 🖥️ 데모 링크 / 시연 영상
 
 - [라이브 데모](https://woorifisa-service-dev-4th.github.io/frontend-1st-dding-ho-wa/)
-- 데스크탑
-영상 링크
-- 모바일
-링크
+- 데스크탑 시연 링크
+[영상 링크](https://drive.google.com/file/d/1nkOxSpomxfZTtts0hjFCdzWdjitsXbR5/view?usp=drive_link)
+
 
 <br>
 
@@ -41,7 +40,6 @@ HTML, CSS를 활용한 철가방 속 물건 맞추기 게임입니다.
 
 
 ### CSS
-- 반응형 스타일을 적용하여 다양한 접속 환경에서 사용 가능
 - 다양한 애니메이션을 활용해 시각적 재미 요소 추가
 
 
@@ -125,7 +123,7 @@ HTML, CSS를 활용한 철가방 속 물건 맞추기 게임입니다.
 
 <br>
 
-## 🤯 회고
+<!-- ## 🤯 회고 -->
 
 
 
