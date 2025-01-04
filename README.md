@@ -1,4 +1,4 @@
-<h1 align="center">우리FISA - Frontend Toy Project</h1>
+![ezgif com-resize](https://github.com/user-attachments/assets/a63ca17a-44b5-4757-a58b-1c16f4526084)<h1 align="center">우리FISA - Frontend Toy Project</h1>
 <br>
 <br>
 <br>
@@ -17,16 +17,17 @@
 
 ## 🖥️ 데모 링크 / 시연 영상
 
-- [라이브 데모](https://woorifisa-service-dev-4th.github.io/frontend-1st-dding-ho-wa/)
+- [라이브 데모 링크🌐](https://woorifisa-service-dev-4th.github.io/frontend-1st-dding-ho-wa/)
   
- <br>
  
 - 데스크탑 시연 링크
+  <br>
   [영상 링크](https://drive.google.com/file/d/1nkOxSpomxfZTtts0hjFCdzWdjitsXbR5/view?usp=drive_link)
   
   <br>
   
 - GIF
+  <br>
   ![ezgif com-resize](https://github.com/user-attachments/assets/7d1cc9b6-5f38-4bfc-896b-9a84181b1daf)
 
 <br>
