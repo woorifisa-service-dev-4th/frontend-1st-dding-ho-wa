@@ -49,11 +49,12 @@ body {
   position: relative;
   width: 20vw;
   right: 3%;
-  height: 100%;
+  height: 100vh;
+  object-fit: contain;
 }
 
 .container_background {
-  background-image: url("./img/background.svg");
+  background-image: url("./img/background.webp");
   background-repeat: repeat;
   background-size: 240px;
   width: 100%;
@@ -88,7 +89,8 @@ body {
   top: 54%;
   left: 50%;
   width: 60vw;
-  transform: translate(-50%, -50%);
+  will-change: transform, opacity;
+  transform: translate(-50%, -50%) translateZ(0);
 }
 
 .container_home_start_animation {
@@ -162,6 +164,7 @@ body {
   src: url("./font/YoonDokrip.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 .container_overlay {
