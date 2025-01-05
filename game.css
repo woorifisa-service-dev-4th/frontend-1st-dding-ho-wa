@@ -1,6 +1,7 @@
 @font-face {
   font-family: "YoonDokrip";
   src: url("./font/YoonDokrip.otf");
+  font-display: swap;
 }
 
 @keyframes bagTopDown {
@@ -58,7 +59,7 @@
 .container_bag_quiz_content img {
   position: absolute;
   width: 70px;
-  top: 80%;
+  top: 90%;
   left: 10%;
 }
 
@@ -66,8 +67,9 @@
   position: absolute;
   top: 54%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
+  will-change: transform, opacity;
+  transform: translate(-50%, -50%) translateZ(0);
+  width: 60vw;
   animation: bagTopDown 0.1s linear forwards;
 }
 
