@@ -1,5 +1,7 @@
 
-# Frontend-1st-Dding-Ho-Wa
+<h1 Style="display:flex;justify-content:center">Frontend-1st-Dding-Ho-Wa</h1>
+
+<br><br><br><br>
 
 ## 👻 팀 소개
 | ![cy](https://avatars.githubusercontent.com/u/94633589?v=4)| ![sj](https://avatars.githubusercontent.com/u/105282117?v=4) | ![sy](https://avatars.githubusercontent.com/u/87513664?v=4) |
