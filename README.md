@@ -1,5 +1,5 @@
 
-<h1 Style="display:flex;justify-content:center">Frontend-1st-Dding-Ho-Wa</h1>
+<h1 style="display:flex;justify-content:center">Frontend-1st-Dding-Ho-Wa</h1>
 
 <br><br><br><br>
 
@@ -26,7 +26,8 @@
 - **GIF**
   <br>
   
-  ![ezgif com-resize](https://github.com/user-attachments/assets/7d1cc9b6-5f38-4bfc-896b-9a84181b1daf)
+![ezgif com-resize](https://github.com/user-attachments/assets/62745dd4-d314-40db-884b-a1628086d346)
+
 
 <br>
 
