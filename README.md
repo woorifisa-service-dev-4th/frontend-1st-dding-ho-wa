@@ -16,13 +16,10 @@
 
 - [**라이브 데모 링크🌐**](https://woorifisa-service-dev-4th.github.io/frontend-1st-dding-ho-wa/)
   
- 
 - **데스크탑 시연 링크**
   <br>
   [영상 링크](https://drive.google.com/file/d/1nkOxSpomxfZTtts0hjFCdzWdjitsXbR5/view?usp=drive_link)
-  
-  <br>
-  
+
 - **GIF**
   <br>
   
@@ -30,9 +27,6 @@
 
 
 <br>
-
-
-
 <br>
 
 ## 🍦 서비스 소개
