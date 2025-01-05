@@ -1,8 +1,3 @@
-![ezgif com-resize](https://github.com/user-attachments/assets/a63ca17a-44b5-4757-a58b-1c16f4526084)<h1 align="center">우리FISA - Frontend Toy Project</h1>
-<br>
-<br>
-<br>
-<br>
 
 # Frontend-1st-Dding-Ho-Wa
 
