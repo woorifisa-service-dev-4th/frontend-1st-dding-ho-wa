@@ -1,9 +1,9 @@
 
-<h1 style="display:flex;justify-content:center">Frontend-1st-Dding-Ho-Wa</h1>
+# Frontend-1st-Dding-Ho-Wa
 
-<br><br><br><br>
+<br>
 
-## 👻 팀 소개
+## 👥 팀 소개
 | ![cy](https://avatars.githubusercontent.com/u/94633589?v=4)| ![sj](https://avatars.githubusercontent.com/u/105282117?v=4) | ![sy](https://avatars.githubusercontent.com/u/87513664?v=4) |
 |--------------------------------------|---------------------------------------|------------------------------------|
 | [서채연](https://github.com/seocylucky)| [이승준](https://github.com/sengjun0624) | [이소연](https://github.com/reed426) |
@@ -132,14 +132,48 @@ HTML, CSS를 활용한 **철가방 속 물건 맞추기 게임**입니다.
 
 
 ## Lighthouse
-- 메타 태그 설정
-- 이미지 webp로 이미지 포맷 최적화
-- 이미지 및 폰트 preload 설정
-- 웹 폰트 대체 텍스트 추가
 
 ### 개선 전
 ![image](https://github.com/user-attachments/assets/e679de5d-5977-4eb2-aa0b-cb26816f6fad)
 
-### 개선 후
+<br>
+
+### 개선 후 
 ![스크린샷 2025-01-05 오전 2 39 58](https://github.com/user-attachments/assets/f17965d6-221c-4f37-89a2-226019cd8a89)
+
+<br>
+
+## 🔍️개선 사항
+<br>
+
+### 메타 태그 설정
+검색 엔진 최적화 성능 향상을 위해 메타태그를 넣어줬어요
+```html
+    <meta
+      name="description"
+      content="IT 개발자들을 위한 재미있는 퀴즈 게임 띵호와"
+    />
+    <meta name="keywords" content="IT, 개발, 게임, 퀴즈, 철가방, 띵호와" />
+```
+
+### 이미지 webp로 이미지 포맷 최적화
+압축률이 뛰어나고 렌더링 성능이 빠른 webp로 문제가 되는 사진들(홈화면 오른쪽 용, 철가방 뚜껑, 문제 로고 사진)을 바꿔주었습니다! <br>
+[⭐️참고자료⭐️](https://medium.com/@yujin.px/image-to-webp-%ED%95%A8%EC%88%98%EB%A1%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B5%9C%EC%A0%81%ED%99%94%ED%95%98%EA%B8%B0-1faeeca219e9)
+
+### 이미지 및 폰트 preload 설정
+이미지와 폰트 로딩 지연으로 해결하기 위해 미리 로드하게 해주는 preloade를 적용하였습니다.
+```html
+    <link rel="preload" href="./img/bagTop.webp" as="image" type="image/webp" />
+    <link rel="preload" href="./data/css.webp" as="image" type="image/webp" />
+```
+
+### CLS 방지를 위한 코드 추가
+웹폰트가 로딩될 때 대체 텍스트가 미리 띄워지고 웹폰트가 로드되면 교체하도록 해주는 `font-display: swap;`를 추가해주었습니다.
+```css
+@font-face {
+  font-family: "YoonDokrip";
+  src: url("./font/YoonDokrip.otf");
+  font-display: swap;
+}
+```
 
