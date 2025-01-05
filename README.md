@@ -10,23 +10,26 @@
 | ![cy](https://avatars.githubusercontent.com/u/94633589?v=4)| ![sj](https://avatars.githubusercontent.com/u/105282117?v=4) | ![sy](https://avatars.githubusercontent.com/u/87513664?v=4) |
 |--------------------------------------|---------------------------------------|------------------------------------|
 | [서채연](https://github.com/seocylucky)| [이승준](https://github.com/sengjun0624) | [이소연](https://github.com/reed426) |
-| 팀장<br>HTML<br>Figma<br>CSS<br>GitHub세팅 | 팀원<br>HTML<br>CSS<br>README        | 팀원<br>HTML<br>CSS<br>Figma        |
+| 팀장<br>HTML<br>Figma<br>CSS<br>LightHouse 측정 및 개선<br>GitHub세팅 | 팀원<br>HTML<br>CSS<br>README        | 팀원<br>HTML<br>CSS<br>Figma        |
 
 
 <br>
 
 ## 🖥️ 데모 링크 / 시연 영상
 
-- [라이브 데모 링크🌐](https://woorifisa-service-dev-4th.github.io/frontend-1st-dding-ho-wa/)
+- **라이브 데모 링크🌐**
+  <br>
+  
+  [](https://woorifisa-service-dev-4th.github.io/frontend-1st-dding-ho-wa/)
   
  
-- 데스크탑 시연 링크
+- **데스크탑 시연 링크**
   <br>
   [영상 링크](https://drive.google.com/file/d/1nkOxSpomxfZTtts0hjFCdzWdjitsXbR5/view?usp=drive_link)
   
   <br>
   
-- GIF
+- **GIF**
   <br>
   ![ezgif com-resize](https://github.com/user-attachments/assets/7d1cc9b6-5f38-4bfc-896b-9a84181b1daf)
 
@@ -39,7 +42,7 @@
 ## 🍦 서비스 소개
 
 우리FISA 클라우드 서비스 개발 교과과정 토이 프로젝트로, <br>
-HTML, CSS를 활용한 철가방 속 물건 맞추기 게임입니다.
+HTML, CSS를 활용한 **철가방 속 물건 맞추기 게임**입니다.
 
 <br>
 
@@ -80,7 +83,7 @@ HTML, CSS를 활용한 철가방 속 물건 맞추기 게임입니다.
 
 ### 🌱 Commit Convention
 
-- 커밋 메시지 규칙
+#### 커밋 메시지 규칙
   - `commit convention`: `commit message`
   - 예시) `feat: 로그인 구현`
 
@@ -111,13 +114,11 @@ HTML, CSS를 활용한 철가방 속 물건 맞추기 게임입니다.
 
 ### Class Name Rule 📌 - 원만한 협업을 위한 클래스네이밍 규칙 적용
 
-- 레이아웃(align / position) : layout_{ }
 - 컨테이너(wrapper) : container_{ }
 - 글꼴 : text_{ }
 - 이미지 : img_{ }
 - 글꼴색 : font_color_{ }
 - 배경색 : bg_color_{ }
-- 구분선 : line
 <br>
 
 ## 🤖 Prototype
