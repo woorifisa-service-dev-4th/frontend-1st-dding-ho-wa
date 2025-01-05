@@ -1,7 +1,6 @@
 
 # Frontend-1st-Dding-Ho-Wa
 
-<br>
 
 ## 👥 팀 소개
 | ![cy](https://avatars.githubusercontent.com/u/94633589?v=4)| ![sj](https://avatars.githubusercontent.com/u/105282117?v=4) | ![sy](https://avatars.githubusercontent.com/u/87513664?v=4) |
@@ -144,7 +143,6 @@ HTML, CSS를 활용한 **철가방 속 물건 맞추기 게임**입니다.
 <br>
 
 ## 🔍️개선 사항
-<br>
 
 ### 메타 태그 설정
 검색 엔진 최적화 성능 향상을 위해 메타태그를 넣어줬어요
