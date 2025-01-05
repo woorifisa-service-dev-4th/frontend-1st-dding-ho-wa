@@ -17,10 +17,7 @@
 
 ## 🖥️ 데모 링크 / 시연 영상
 
-- **라이브 데모 링크🌐**
-  <br>
-  
-  [](https://woorifisa-service-dev-4th.github.io/frontend-1st-dding-ho-wa/)
+- [**라이브 데모 링크🌐**](https://woorifisa-service-dev-4th.github.io/frontend-1st-dding-ho-wa/)
   
  
 - **데스크탑 시연 링크**
