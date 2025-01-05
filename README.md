@@ -159,7 +159,7 @@ HTML, CSS를 활용한 **철가방 속 물건 맞추기 게임**입니다.
 [⭐️참고자료⭐️](https://medium.com/@yujin.px/image-to-webp-%ED%95%A8%EC%88%98%EB%A1%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B5%9C%EC%A0%81%ED%99%94%ED%95%98%EA%B8%B0-1faeeca219e9)
 
 ### 이미지 및 폰트 preload 설정
-이미지와 폰트 로딩 지연으로 해결하기 위해 미리 로드하게 해주는 preloade를 적용하였습니다.
+이미지와 폰트 로딩 지연을 해결하기 위해 미리 로드하게 해주는 preload를 적용하였습니다.
 ```html
     <link rel="preload" href="./img/bagTop.webp" as="image" type="image/webp" />
     <link rel="preload" href="./data/css.webp" as="image" type="image/webp" />
