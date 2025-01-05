@@ -56,6 +56,7 @@ HTML, CSS를 활용한 **철가방 속 물건 맞추기 게임**입니다.
 
 ### CSS
 - 다양한 애니메이션을 활용해 시각적 재미 요소 추가
+- 1090px 이상의 해상도만 이용할 수 있게 반응형 적용
 
 
 <br>
@@ -141,9 +142,14 @@ HTML, CSS를 활용한 **철가방 속 물건 맞추기 게임**입니다.
 
 
 ## Lighthouse
+- 메타 태그 설정
+- 이미지 webp로 이미지 포맷 최적화
+- 이미지 및 폰트 preload 설정
+- 웹 폰트 대체 텍스트 추가
 
 ### 개선 전
-![image](https://github.com/user-attachments/assets/19cbe7ed-1218-4159-8762-a079c621287d)
+![image](https://github.com/user-attachments/assets/e679de5d-5977-4eb2-aa0b-cb26816f6fad)
 
-<br>
+### 개선 후
+![스크린샷 2025-01-05 오전 2 39 58](https://github.com/user-attachments/assets/f17965d6-221c-4f37-89a2-226019cd8a89)
 
