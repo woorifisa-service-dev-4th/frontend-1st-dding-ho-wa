@@ -8,17 +8,16 @@ let elapsed = 0; // 경과 시간
 let interval = null; // 타이머 인터벌
 
 
-function updateProgressBar() {
+export function updateProgressBar() {
   const progressPercentage = (elapsed / totalTime) * 100;
   progressBar.style.width = `${Math.max(0, Math.min(progressPercentage, 100))}%`;
 }
 
-
-function resetProgressBar() {
+export function resetProgressBar() {
   updateProgressBar();
 }
 
-function startProgressBar() {
+export function startProgressBar() {
   clearInterval(interval); // 기존 타이머 종료
   interval = setInterval(() => {
     if (elapsed < totalTime) {
@@ -30,5 +29,3 @@ function startProgressBar() {
   }, 1000); // 1초마다 업데이트
 }
 // 초기화 및 시작
-resetProgressBar();
-startProgressBar();

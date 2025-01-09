@@ -1,14 +1,34 @@
 // 이미지 배열 (랜덤으로 선택할 이미지)
+import {
+  updateProgressBar,
+  resetProgressBar,
+  startProgressBar,
+} from './timer.js';
 
+let nickname;
+
+document.addEventListener("DOMContentLoaded", () => {
+  return localStorage.getItem("nickname");
+});
+
+resetProgressBar();
+startProgressBar();
+
+const totalTime = 20;
 const images = [
   { src: 'img/짜장면.png', alt: '짜장면' },
   { src: 'img/짬뽕.png', alt: '짬뽕' },
-  { src: 'img/라멘.png', alt: '라멘' },
 ];
 const slots = ['slot1', 'slot2', 'slot3'];
+
 // 이미지와 컨테이너 참조
 const imgBagTop = document.querySelector('.img_bagTop');
 const bagTopContainer = document.querySelector('.bag_top_container');
+
+
+let interval = null; // 타이머 인터벌
+
+
 function openModal() {
   const modal = document.querySelector('.container_grading_overlay');
   if (modal) {
@@ -37,6 +57,7 @@ function closeFailModal() {
     modal.style.display = 'none';
   }
 }
+
 // 이미지 크기를 가져와 컨테이너 크기 설정
 function setContainerSize() {
   console.log('setContainerSize');
@@ -238,15 +259,24 @@ function callRandomFunction() {
 
 // gameCount가 0이 될 때까지 랜덤 함수 호출
 function callRandomFunctionsGameLoop() {
-  let gameCount = 10;
+  let timer = totalTime; // 게임 시간 30초
+  let timeElapsed = 0; // 경과 시간 추적
+  let interval = setInterval(() => {
+    timeElapsed++;
+    if (timeElapsed >= timer) {
+      clearInterval(interval); // 타이머 종료
+      console.log('Game Over - Time\'s up!');
+      // openFailModal(); // 시간 종료 시 실패 모달 열기
+    }
+  }, 1000);
 
   function iterate() {
     console.log('iterate called');
-    if (gameCount >= 0) {
+    if (timeElapsed < timer) {
       callRandomFunction().then(() => {
-        gameCount--;
-        console.log(gameCount);
-        iterate();
+        if (timeElapsed < timer) {
+          iterate();
+        }
       });
     } else {
       clearPreviousImages();
@@ -256,7 +286,7 @@ function callRandomFunctionsGameLoop() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          nickname: 'test', // Replace with actual username variable if exists
+          nickname: nickname,
           score: correctCount,
         }),
       })
@@ -272,10 +302,12 @@ function callRandomFunctionsGameLoop() {
         .catch(error => {
           console.error('Error:', error);
         });
+      clearInterval(interval);
       console.log('exit');
     }
   }
-  if(gameCount===10)iterate();
+
+  if (timeElapsed < timer) iterate();
 }
 
 // 사용 예시

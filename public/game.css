@@ -9,8 +9,8 @@
         top: -30%;
     }
     100% {
-        top: -10%;
-        /*top: 54%;*/
+        /*top: -10%;*/
+        top: 54%;
     }
 }
 
@@ -25,6 +25,7 @@
 
 .container_background {
     display: none;
+
 }
 
 @media (min-width: 1090px) {
@@ -79,7 +80,7 @@
     will-change: transform, opacity;
     transform: translate(-50%, -50%) translateZ(0);
     width: 60vw;
-    animation: bagTopDown 0.5s linear forwards;
+    animation: bagTopDown 10s linear forwards;
     z-index: 2; /* img_bagTop을 앞쪽에 배치 */
 }
 .slot {
