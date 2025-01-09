@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "YoonDokrip";
-  src: url("font/YoonDokrip.otf");
+  font-family: 'YoonDokrip';
+  src: url('font/YoonDokrip.otf');
   font-display: swap;
 }
 
@@ -9,6 +9,7 @@
     top: -30%;
   }
   100% {
+    /*top: -10%;*/
     top: 54%;
   }
 }
@@ -56,21 +57,58 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .container_bag_quiz_content img {
   position: absolute;
   width: 70px;
   top: 90%;
   left: 10%;
 }
-
-.img_bagTop {
+.bag_top_container {
   position: absolute;
   top: 54%;
   left: 50%;
   will-change: transform, opacity;
   transform: translate(-50%, -50%) translateZ(0);
   width: 60vw;
-  animation: bagTopDown 0.1s linear forwards;
+}
+.img_bagTop {
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  will-change: transform, opacity;
+  transform: translate(-50%, -50%) translateZ(0);
+  width: 60vw;
+  animation: bagTopDown 2s linear forwards;
+  z-index: 2; /* img_bagTop을 앞쪽에 배치 */
+}
+.slot {
+  position: absolute;
+  left: 1.4%;
+  width: 94.5%;
+  height: 24%;
+  margin: 10px;
+  display: flex;
+  z-index: 1; /* img_bagTop을 앞쪽에 배치 */
+}
+#slot1 {
+  top: 2%;
+}
+
+#slot2 {
+  top: 32%;
+}
+
+#slot3 {
+  top: 68%;
+}
+
+.slot img {
+  cursor: pointer;
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 10;
 }
 
 .layout_content {
@@ -90,10 +128,11 @@
   opacity: 0;
   animation: fadeIn 0.5s ease-in forwards;
   animation-delay: 0.1s;
+  z-index: 3;
 }
 
 .layout_content .text_quiz_title {
-  font-family: "YoonDokrip";
+  font-family: 'YoonDokrip';
   color: #b01017;
   text-align: center;
   font-size: 80px;
@@ -111,7 +150,7 @@
   width: 540px;
   font-size: 38px;
   color: #ffffff;
-  font-family: "YoonDokrip";
+  font-family: 'YoonDokrip';
 
   &::placeholder {
     color: #ffffff;
@@ -185,7 +224,7 @@
   display: block;
 }
 
-input[type="checkbox"]:checked + label {
+input[type='checkbox']:checked + label {
   color: green;
   font-weight: bold;
 }
@@ -199,6 +238,7 @@ input[type="checkbox"]:checked + label {
   font-weight: 400;
   font-family: YoonDokrip;
 }
+
 .text_thank_msg {
   margin-top: 57px;
   font-size: 60px;
@@ -253,6 +293,7 @@ hr {
     font-size: 28px;
     width: 440px;
   }
+
   .timer {
     width: 120px;
     height: 120px;
@@ -268,6 +309,7 @@ hr {
     font-size: 18px;
     width: 340px;
   }
+
   .timer {
     width: 100px;
     height: 100px;
@@ -332,33 +374,51 @@ hr {
 
 a {
   text-decoration-line: none;
+
   &:visited {
     color: #000000;
   }
 }
 
-
-.container_grading_overlay, .container_grading_fail_overlay {
+.container_grading_overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  display: none;
+  z-index: 1000;
+  border: none;
 }
-.img_correct, .img_fail{
+.container_grading_fail_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 1000;
+  border: none;
+}
+.img_correct,
+.img_fail {
   background-color: transparent;
 }
-.grading_correct_modal , .grading_fail_modal{
+.grading_correct_modal {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
   padding: 20px;
-  background-color:transparent;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 2;
+  text-align: center;
+  z-index: 1000;
 }
-
+.grading_fail_modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  text-align: center;
+  z-index: 1000;
+}

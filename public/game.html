@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="game.css" />
     <link rel="preload" href="img/bagTop.webp" as="image" type="image/webp" />
-    <link rel="preload" href="../data/css.webp" as="image" type="image/webp" />
+    <link rel="stylesheet" href="timer.css" />
+
     <link
       rel="preload"
       href="font/YoonDokrip.otf"
@@ -28,9 +29,10 @@
       type="font/otf"
       crossorigin="anonymous"
     />
+    <script type="module" defer src="game.js "></script>
   </head>
   <body>
-    <audio autoplay>
+    <audio autoplay loop>
       <source src="audio/quizBGM.mp3" type="audio/mpeg" />
     </audio>
 
@@ -39,53 +41,58 @@
       <div class="text_warning">1090px 이상 해상도만 이용 가능합니다✨🌈</div>
     </div>
 
-    <!-- <div class="container_overlay"></div>
-    <div class="container_modal">
-      <div class="container_modal_content">
-        <div class="text_receipt">띵호와 결과 계산서</div>
-        <div class="text_thank_msg">감사합니다</div>
-        <a href="./index.html">
-          <button class="btn_restart">홈으로</button>
-        </a>
-        <hr />
-      </div>
-      <div>
-        <p class="text_total">TOTAL</p>
-      </div>
-      <div>
-        <div class="text_score">4 / 10</div>
-      </div>
-    </div> -->
-
-    
-    <div class="container_grading_overlay">
+    <div class="container_grading_overlay" style="display: none">
       <div class="grading_correct_modal">
-        <img src="img/correct.png" width="500px" height="500px" class="img_correct">
+        <img
+          src="img/correct.png"
+          width="500px"
+          height="500px"
+          class="img_correct"
+        />
       </div>
     </div>
 
-    <div class="container_grading_fail_overlay_">
+    <div class="container_grading_fail_overlay" style="display: none">
       <div class="grading_fail_modal">
-        <img src="img/fail.png" width="500px" height="500px" class="img_fail">
+        <img src="img/fail.png" class="img_fail" />
       </div>
     </div>
-
 
     <div class="container_background">
+      <div
+        class="progress-container"
+        style="display: flex; align-content: center"
+      >
+        <img
+          src="/img/bell.png"
+          style="
+            width: 30px;
+            height: 30px;
+            margin-right: 1rem;
+            margin-bottom: 20px;
+          "
+        />
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+      </div>
       <img src="img/bag.svg" alt="철가방" class="img_bag" />
-      <div class="container_bag_quiz_content" id="quiz-content">
-        <img src="../data/css.webp" alt="css" />
-      </div>
+      <div class="container_bag_quiz_content" id="quiz-content"></div>
       <img src="img/bagTop.webp" alt="철가방 뚜껑" class="img_bagTop" />
-      <div class="layout_content">
-        <div class="text_quiz_title">철가방 속 이름은?</div>
-        <input type="text" placeholder="철가방 속 이름은?" />
 
-        <a href="./game2.html">
-          <div class="btn_submit">제출</div>
-        </a>
-        <div class="timer"></div>
+      <div class="bag_top_container">
+        <div class="slot" id="slot1"></div>
+        <div class="slot" id="slot2"></div>
+        <div class="slot" id="slot3"></div>
       </div>
+
+      <!--      <div class="layout_content">-->
+      <!--        <div class="text_quiz_title">철가방 속 이름은?</div>-->
+      <!--        <input type="text" placeholder="철가방 속 이름은?" />-->
+      <!--        <a href="./game.html">-->
+      <!--          <div class="btn_submit">제출</div>-->
+      <!--        </a>-->
+      <!--        <div class="timer"></div>-->
     </div>
   </body>
 </html>

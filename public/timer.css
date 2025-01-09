@@ -1,0 +1,25 @@
+
+.progress-container {
+  position:absolute;
+  top: 93%;
+  left: 20%;
+  width: 80%;
+  max-width: 70%;
+  z-index:4;
+}
+
+.progress-bar {
+  width: inherit;
+  background: #ddd;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.progress {
+  background: #FCC338; 
+  height: 100%;
+  width: 0;
+  transition: width 1s linear; 
+}
+
