@@ -4,12 +4,23 @@ import {
   resetProgressBar,
   startProgressBar,
 } from './timer.js';
+import { saveResult } from './api/api.js';
 
-let nickname;
-
-document.addEventListener("DOMContentLoaded", () => {
-  return localStorage.getItem("nickname");
+const bagTopElement = document.querySelector('.img_bagTop');
+bagTopElement.addEventListener('animationstart', () => {
+  console.log('애니메이션 시작');
 });
+bagTopElement.addEventListener('animationend', () => {
+  console.log('애니메이션 종료');
+});
+let nickname;
+let correctCount = 0;
+
+document.addEventListener('DOMContentLoaded', () => {
+  nickname= localStorage.getItem('nickname');
+});
+
+
 
 resetProgressBar();
 startProgressBar();
@@ -26,7 +37,26 @@ const imgBagTop = document.querySelector('.img_bagTop');
 const bagTopContainer = document.querySelector('.bag_top_container');
 
 
-let interval = null; // 타이머 인터벌
+function triggerBagTopAnimation() {
+  const bagTopElement = document.querySelector('.img_bagTop'); // 애니메이션 대상 요소
+  if (!bagTopElement) {
+    console.error('img_bagTop 요소를 찾을 수 없습니다.');
+    return;
+  }
+
+  // 기존 클래스 제거 후 reflow 발생
+  // 기존 클래스 제거 후 다시 추가
+  bagTopElement.classList.remove('bagTopDown');
+  void bagTopElement.offsetWidth; // 강제로 reflow 발생 (애니메이션 초기화)
+  bagTopElement.classList.add('bagTopDown');
+
+
+  // 애니메이션이 끝난 후 클래스 제거 (선택 사항)
+  bagTopElement.addEventListener('animationend', () => {
+    bagTopElement.classList.remove('bagTopDown');
+    console.log('애니메이션 완료');
+  });
+}
 
 
 function openModal() {
@@ -60,11 +90,9 @@ function closeFailModal() {
 
 // 이미지 크기를 가져와 컨테이너 크기 설정
 function setContainerSize() {
-  console.log('setContainerSize');
   const imgRect = imgBagTop.getBoundingClientRect(); // 이미지 크기 가져오기
   bagTopContainer.style.width = `${imgRect.width}px`;
   bagTopContainer.style.height = `${imgRect.height}px`;
-  console.log(imgRect.height, 'px');
 }
 
 // 이미지가 로드된 상태에서도 크기를 설정
@@ -160,57 +188,90 @@ function generatePairImages() {
 }
 
 // 전역 정답 변수
-let correctCount = 10;
 
 // 짜장면 이미지만 사용하여 슬롯에 1개의 이미지를 생성
 function generateJjajangImage() {
   return new Promise((resolve) => {
+    const clickHandlers = [];
     clearPreviousImages();
     const jjajangImage = images.filter(img => img.alt === '짜장면');
     generateRandomImages(jjajangImage, 1);
-    console.log('짜장게임');
-    // 생성된 이미지에 클릭 이벤트 추가
+
     const slotImages = document.querySelectorAll('#slot1 img, #slot2 img, #slot3 img');
+    // 2초 타이머 설정
+
     slotImages.forEach(image => {
       if (image.alt === '짜장면') {
-        image.addEventListener('click', function clickHandler3() {
+        const clickHandler = () => {
           correctCount++;
           console.log('정답! 현재 정답 수:', correctCount);
-          image.removeEventListener('click', clickHandler3);
-          resolve();
-        });
+          removeClickListeners(); // 클릭 리스너 제거
+          resolve(); // Promise 해결
+        };
+        image.addEventListener('click', clickHandler);
+        clickHandlers.push({ element: image, handler: clickHandler });
+
       }
     });
+
+// 2초 타이머 설정
+    const timer = setTimeout(() => {
+      removeClickListeners(); // 클릭 리스너 제거
+      resolve(); // Promise 해결
+    }, 2000);
+
+    // 클릭 리스너 제거 함수
+    function removeClickListeners() {
+      clearTimeout(timer); // 타이머 해제
+      clickHandlers.forEach(({ element, handler }) => {
+        element.removeEventListener('click', handler); // 클릭 리스너 제거
+      });
+    }
+
   });
 }
 
 // 짜장면과 짬뽕 이미지를 사용하여 슬롯에 2개의 이미지를 랜덤 생성
 function generateJjajangAndJjambbongImages() {
   return new Promise((resolve) => {
+    const clickHandlers = [];
     clearPreviousImages();
-    console.log('짜장 짬뽕게임');
-    const selectedImages = [images.find(img => img.alt === '짜장면'), images.find(img => img.alt === '짬뽕')];
     generatePairImages();
 
-    // 생성된 이미지에 클릭 이벤트 추가
     const slotImages = document.querySelectorAll('#slot1 img, #slot2 img, #slot3 img');
-    slotImages.forEach(image => {
+
+    slotImages.forEach((image) => {
       if (image.alt === '짜장면') {
-        image.addEventListener('click', function clickHandler1() {
+        const clickHandler1 = () => {
           correctCount++;
-          console.log('정답! 현재 정답 수:', correctCount);
-          image.removeEventListener('click', clickHandler1);
-          resolve();
-        });
+          removeClickListeners(); // 클릭 리스너 제거
+          resolve(); // Promise 해결
+        };
+        image.addEventListener('click', clickHandler1);
+        clickHandlers.push({ element: image, handler: clickHandler1 });
       } else if (image.alt === '짬뽕') {
-        image.addEventListener('click', function clickHandler2() {
-          correctCount--;
-          console.log('오답! 현재 정답 수:', correctCount);
-          image.removeEventListener('click', clickHandler2);
-          resolve();
-        });
+        const clickHandler2 = () => {
+          removeClickListeners(); // 클릭 리스너 제거
+          resolve(); // Promise 해결
+        };
+        image.addEventListener('click', clickHandler2);
+        clickHandlers.push({ element: image, handler: clickHandler2 });
       }
     });
+
+    // 2초 타이머 설정
+    const timer = setTimeout(() => {
+      removeClickListeners(); // 클릭 리스너 제거
+      resolve(); // Promise 해결
+    }, 2000);
+
+    // 클릭 리스너 제거 함수
+    function removeClickListeners() {
+      clearTimeout(timer); // 타이머 해제
+      clickHandlers.forEach(({ element, handler }) => {
+        element.removeEventListener('click', handler);
+      });
+    }
   });
 }
 
@@ -218,15 +279,22 @@ function generateJjajangAndJjambbongImages() {
 function generateNoImages() {
   return new Promise((resolve) => {
     clearPreviousImages();
-    console.log('노이미지 게임');
-    const bagTopContainer = document.querySelector('.bag_top_container');
+    const timer = setTimeout(() => {
+      removeClickListener(); // 클릭 리스너 제거
+      correctCount++;
+      resolve(); // 2초 후 resolve
+    }, 2000);
 
-    if (bagTopContainer) {
-      bagTopContainer.addEventListener('click', function handleClick() {
-        console.log('오답 처리! 클릭되었습니다.');
-        bagTopContainer.removeEventListener('click', handleClick); // 이벤트 리스너 제거
-        resolve();
-      });
+    function handleClick() {
+      clearTimeout(timer); // 타이머 해제
+      removeClickListener(); // 클릭 리스너 제거
+      resolve();
+    }
+
+    bagTopContainer.addEventListener('click', handleClick);
+
+    function removeClickListener() {
+      bagTopContainer.removeEventListener('click', handleClick);
     }
   });
 }
@@ -257,57 +325,54 @@ function callRandomFunction() {
   return randomFunction();
 }
 
-// gameCount가 0이 될 때까지 랜덤 함수 호출
 function callRandomFunctionsGameLoop() {
   let timer = totalTime; // 게임 시간 30초
   let timeElapsed = 0; // 경과 시간 추적
-  let interval = setInterval(() => {
+  let interval;
+
+  // 타이머 시작
+  interval = setInterval(() => {
     timeElapsed++;
     if (timeElapsed >= timer) {
       clearInterval(interval); // 타이머 종료
-      console.log('Game Over - Time\'s up!');
-      // openFailModal(); // 시간 종료 시 실패 모달 열기
+      console.log("Game Over - Time's up!");
+      endGame(); // 시간 종료 시 게임 종료 처리
     }
   }, 1000);
 
-  function iterate() {
-    console.log('iterate called');
+  // 비동기 작업 반복
+  async function iterate() {
     if (timeElapsed < timer) {
-      callRandomFunction().then(() => {
+      try {
+        await callRandomFunction();
+        console.log(timeElapsed);
         if (timeElapsed < timer) {
-          iterate();
+          console.log('animation called');
+          triggerBagTopAnimation(); // 애니메이션 호출
+          iterate(); // 반복 호출
         }
-      });
-    } else {
-      clearPreviousImages();
-      fetch('/result', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          nickname: nickname,
-          score: correctCount,
-        }),
-      })
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
-        })
-        .then(data => {
-          console.log('Success:', data);
-        })
-        .catch(error => {
-          console.error('Error:', error);
-        });
-      clearInterval(interval);
-      console.log('exit');
+      } catch (error) {
+        console.error("비동기 작업 중 오류 발생:", error);
+        clearInterval(interval);
+      }
     }
   }
 
-  if (timeElapsed < timer) iterate();
+  // 게임 종료 처리
+  async function endGame() {
+    clearPreviousImages(); // 이전 이미지 삭제
+    try {
+      console.log(nickname);
+      const result = await saveResult(nickname, correctCount); // 점수 저장
+      console.log("API 호출 결과:", result);
+    } catch (error) {
+      console.error("API 호출 실패:", error);
+      alert("점수 저장 중 오류가 발생했습니다.");
+    }
+  }
+
+  // 게임 루프 시작
+  iterate();
 }
 
 // 사용 예시

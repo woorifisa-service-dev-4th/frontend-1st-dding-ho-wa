@@ -75,12 +75,12 @@
 }
 .img_bagTop {
     position: absolute;
-    top: -10%;
+    top: -30%;
     left: 50%;
     will-change: transform, opacity;
     transform: translate(-50%, -50%) translateZ(0);
     width: 60vw;
-    animation: bagTopDown 10s linear forwards;
+    /*animation: bagTopDown 0.1s linear forwards;*/
     z-index: 2; /* img_bagTop을 앞쪽에 배치 */
 }
 .slot {

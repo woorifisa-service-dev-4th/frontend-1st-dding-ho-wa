@@ -37,7 +37,7 @@ connectDB();
 app.post('/result', async (req, res) => {
     const { nickname, score } = req.body;
 
-    console.log(req.body, typeof (score));
+    console.log(req.body, nickname);
     if (!nickname || typeof score !== 'number') {
         console.error('❌ 데이터 유효성 검사 실패:', req.body);
         return res.status(400).send('Invalid data');
