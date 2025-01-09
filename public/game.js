@@ -1,6 +1,5 @@
 // 이미지 배열 (랜덤으로 선택할 이미지)
 import {
-  updateProgressBar,
   resetProgressBar,
   startProgressBar,
 } from './timer.js';
@@ -15,6 +14,7 @@ bagTopElement.addEventListener('animationend', () => {
 });
 let nickname;
 let correctCount = 0;
+const totalTime = 20;
 
 document.addEventListener('DOMContentLoaded', () => {
   nickname = localStorage.getItem('nickname');
@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
 resetProgressBar();
 startProgressBar();
 
-const totalTime = 20;
 const images = [
   { src: 'img/짜장면.png', alt: '짜장면' },
   { src: 'img/짬뽕.png', alt: '짬뽕' },
@@ -40,9 +39,9 @@ function triggerBagTopAnimation() {
     return;
   }
 
-  bagTopElement.classList.remove('bagTopDown');
-  void bagTopElement.offsetHeight;
-  bagTopElement.classList.add('bagTopDown');
+  bagTopElement.style.animation = 'none';
+  void bagTopElement.offsetWidth;
+  bagTopElement.style.animation = 'bagTopDown 2s ease-in-out forwards';
 
   bagTopElement.addEventListener('animationstart', () => {
     console.log('애니메이션 시작');
@@ -54,42 +53,7 @@ function triggerBagTopAnimation() {
   });
 }
 
-function repeatBagTopAnimation(repeatCount = 10) {
-  const bagTopElement = document.querySelector('.img_bagTop');
-  if (!bagTopElement) {
-    console.error('img_bagTop 요소를 찾을 수 없습니다.');
-    return;
-  }
 
-  let count = 0; // 반복 횟수 추적
-
-  function startAnimation() {
-    if (count >= repeatCount) {
-      console.log('애니메이션 종료');
-      return;
-    }
-
-    bagTopElement.style.animation = 'none';
-    void bagTopElement.offsetWidth;
-    bagTopElement.style.animation = 'bagTopDown 1s ease-in-out forwards';
-
-    count++;
-
-    bagTopElement.addEventListener(
-      'animationend',
-      () => {
-        setTimeout(() => {
-          startAnimation();
-        }, 1000);
-      },
-      { once: true }
-    );
-  }
-
-  startAnimation();
-}
-
-repeatBagTopAnimation(10);
 
 function openModal() {
   const modal = document.querySelector('.container_grading_overlay');
@@ -148,7 +112,7 @@ function generateRandomImages(imagesArray, imageCount) {
     const imageWidth = slotRect.width * SIZE;
     const imageHeight = slotRect.height * SIZE;
 
-    const WEIGHT = 3;
+    const WEIGHT = 4;
     const randomLeft = Math.random() * (slotRect.width - imageWidth * WEIGHT);
     const randomTop = Math.random() * (slotRect.height - imageHeight * WEIGHT);
 
@@ -215,11 +179,7 @@ function generateJjajangImage() {
         const clickHandler = () => {
           correctCount++;
           console.log('정답! 현재 정답 수:', correctCount);
-          openModal('.container_grading_overlay');
 
-          setTimeout(() => {
-            closeModal('.container_grading_overlay');
-          }, 1000);
           removeClickListeners();
           resolve();
         };
@@ -230,6 +190,8 @@ function generateJjajangImage() {
 
     const timer = setTimeout(() => {
       removeClickListeners();
+
+
       resolve();
     }, 2000);
 
@@ -256,11 +218,7 @@ function generateJjajangAndJjambbongImages() {
       if (image.alt === '짜장면') {
         const clickHandler1 = () => {
           correctCount++;
-          openModal('.container_grading_overlay');
 
-          setTimeout(() => {
-            closeModal('.container_grading_overlay');
-          }, 1000);
           removeClickListeners();
           resolve();
         };
@@ -268,11 +226,7 @@ function generateJjajangAndJjambbongImages() {
         clickHandlers.push({ element: image, handler: clickHandler1 });
       } else if (image.alt === '짬뽕') {
         const clickHandler2 = () => {
-          openFailModal('.container_fail_grading_overlay');
 
-          setTimeout(() => {
-            closeFailModal('.container_fail_grading_overlay');
-          }, 1000);
           removeClickListeners();
           resolve();
         };
@@ -283,6 +237,8 @@ function generateJjajangAndJjambbongImages() {
 
     const timer = setTimeout(() => {
       removeClickListeners();
+
+
       resolve();
     }, 2000);
 
@@ -301,12 +257,15 @@ function generateNoImages() {
     const timer = setTimeout(() => {
       removeClickListener();
       correctCount++;
+
+
       resolve();
     }, 2000);
 
     function handleClick() {
       clearTimeout(timer);
       removeClickListener();
+
       resolve();
     }
 
@@ -377,6 +336,7 @@ function callRandomFunctionsGameLoop() {
 
   async function endGame() {
     clearPreviousImages();
+    localStorage.setItem('score', correctCount);
     try {
       console.log(nickname);
       const result = await saveResult(nickname, correctCount);

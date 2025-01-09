@@ -79,7 +79,7 @@
   will-change: transform, opacity;
   transform: translate(-50%, -50%) translateZ(0);
   width: 60vw;
-  animation: bagTopDown 0.5s linear forwards;
+  animation: bagTopDown 2s linear forwards;
   z-index: 2; /* img_bagTop을 앞쪽에 배치 */
 }
 .slot {
