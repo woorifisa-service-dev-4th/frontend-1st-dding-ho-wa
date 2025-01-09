@@ -9,7 +9,8 @@
         top: -30%;
     }
     100% {
-        top: 54%;
+        top: -10%;
+        /*top: 54%;*/
     }
 }
 
@@ -72,10 +73,41 @@
     width: 60vw;
 }
 .img_bagTop {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    will-change: transform, opacity;
+    transform: translate(-50%, -50%) translateZ(0);
+    width: 60vw;
+    animation: bagTopDown 0.5s linear forwards;
+    z-index: 2; /* img_bagTop을 앞쪽에 배치 */
+}
+.slot {
+    position: absolute;
+    left:1.4%;
+    width: 94.5%;
+    height: 24%;
+    margin: 10px;
+    display: flex;
+    z-index: 1; /* img_bagTop을 앞쪽에 배치 */
+}
+#slot1 {
+    top: 2%;
+}
+
+#slot2 {
+    top: 32%;
+}
+
+#slot3 {
+    top: 68%;
+}
+
+.slot img {
+    position: relative;
     max-width: 100%;
     max-height: 100%;
-    will-change: transform, opacity;
-    animation: bagTopDown 0.1s linear forwards;
+    z-index:10;
 }
 
 .layout_content {
@@ -95,6 +127,7 @@
     opacity: 0;
     animation: fadeIn 0.5s ease-in forwards;
     animation-delay: 0.1s;
+    z-index: 3;
 }
 
 .layout_content .text_quiz_title {
@@ -344,31 +377,4 @@ a {
     &:visited {
         color: #000000;
     }
-}
-
-.slot_container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-}
-
-.slot {
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    border: 1px solid gray;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-}
-
-.slot img {
-    max-width: 100%;
-    max-height: 100%;
-    z-index: 1;
 }
