@@ -112,7 +112,7 @@ function generatePairImages() {
 }
 
 // 전역 정답 변수
-let correctCount = 0;
+let correctCount = 10;
 
 // 짜장면 이미지만 사용하여 슬롯에 1개의 이미지를 생성
 function generateJjajangImage() {
@@ -223,7 +223,28 @@ function callRandomFunctionsGameLoop() {
       });
     } else {
       clearPreviousImages();
-      //TODO '/result'호출 후 종료
+      fetch('/result', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          nickname: 'test', // Replace with actual username variable if exists
+          score: correctCount,
+        }),
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          console.log('Success:', data);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
       console.log('exit');
     }
   }

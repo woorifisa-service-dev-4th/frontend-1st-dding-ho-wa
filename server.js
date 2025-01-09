@@ -1,4 +1,4 @@
-import express from 'express';
+import express,{json} from 'express';
 import dotenv from 'dotenv';
 import mysql from 'mysql2/promise';
 import cors from 'cors';
@@ -37,6 +37,7 @@ connectDB();
 app.post('/result', async (req, res) => {
     const { nickname, score } = req.body;
 
+    console.log(req.body, typeof (score));
     if (!nickname || typeof score !== 'number') {
         console.error('❌ 데이터 유효성 검사 실패:', req.body);
         return res.status(400).send('Invalid data');
