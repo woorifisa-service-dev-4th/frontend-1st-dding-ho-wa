@@ -1,57 +1,34 @@
-let timer;
-let timeRemaining = 60; // 타이머 설정 시간 (60초)
-let isRunning = false;
-let progressBar = document.getElementById('progress-bar');
-let timeDisplay = document.getElementById('time-display');
-let startButton = document.getElementById('start-button');
+const progressBar = document.querySelector('.progress');
+const timerText = document.getElementById('timer');
+const increaseButton = document.getElementById('increase-time');
+const decreaseButton = document.getElementById('decrease-time');
 
-function startTimer() {
-    if (isRunning) return; // 타이머가 이미 실행 중이면 아무것도 안 함
+let totalTime = 20; // 초기 총 시간
+let elapsed = 0; // 경과 시간
+let interval = null; // 타이머 인터벌
 
-    isRunning = true;
-    startButton.textContent = '정지';
 
-    timer = setInterval(() => {
-        if (timeRemaining <= 0) {
-            clearInterval(timer);
-            isRunning = false;
-            startButton.textContent = '시작';
-            return;
-        }
-
-        timeRemaining--;
-        updateUI();
-    }, 1000);
+function updateProgressBar() {
+  const progressPercentage = (elapsed / totalTime) * 100;
+  progressBar.style.width = `${Math.max(0, Math.min(progressPercentage, 100))}%`;
 }
 
-function stopTimer() {
-    clearInterval(timer);
-    isRunning = false;
-    startButton.textContent = '시작';
+
+function resetProgressBar() {
+  updateProgressBar();
 }
 
-function updateUI() {
-    let minutes = Math.floor(timeRemaining / 60);
-    let seconds = timeRemaining % 60;
-    timeDisplay.textContent = `${formatTime(minutes)}:${formatTime(seconds)}`;
-
-    let progress = (60 - timeRemaining) / 60 * 100;
-    progressBar.style.width = `${progress}%`;
-}
-
-function formatTime(time) {
-    return time < 10 ? `0${time}` : time;
-}
-
-startButton.addEventListener('click', () => {
-    if (isRunning) {
-        stopTimer();
+function startProgressBar() {
+  clearInterval(interval); // 기존 타이머 종료
+  interval = setInterval(() => {
+    if (elapsed < totalTime) {
+      elapsed++;
+      updateProgressBar();
     } else {
-        timeRemaining = 60; // 다시 60초로 초기화
-        updateUI();
-        startTimer();
+      clearInterval(interval); // 시간이 끝났을 경우 종료
     }
-});
-
-// 초기 UI 설정
-updateUI();
+  }, 1000); // 1초마다 업데이트
+}
+// 초기화 및 시작
+resetProgressBar();
+startProgressBar();
