@@ -182,8 +182,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
-  height: 70%;
+  width: 65%;
+  height: 72%;
   padding: 20px;
   background-color: white;
   box-shadow: 0 4px 8px r gba(0, 0, 0, 0.2);
@@ -213,11 +213,11 @@ input[type="checkbox"]:checked + label {
   cursor: pointer;
   background-color: #fcc338;
   color: #000000;
-  width: 120px;
-  height: 64px;
+  width: 170px;
+  height: 56px;
   border: none;
-  margin-top: 50px;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   font-size: 24px;
   font-weight: 700;
   border-radius: 52px;
@@ -228,7 +228,7 @@ input[type="checkbox"]:checked + label {
   font-size: 60px;
   font-weight: 400;
   font-family: Yoon독립체;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   margin-bottom: 3rem;
 }
 
@@ -240,4 +240,40 @@ input[type="checkbox"]:checked + label {
   margin-top: 1rem;
   margin-bottom: 2rem;
   font-weight: lighter;
+}
+
+.text_name_input {
+  font-family: Yoon독립체;
+  font-size: 25px;
+}
+
+.text_team_name{
+  display: flex;
+  justify-content: end;
+  font-family: Yoon독립체;
+  font-size: 20px;
+  padding-bottom: 1rem;
+}
+.text_name_input input{
+    margin-top: 32px;
+    background-color: #9E9E9E;
+    border: none;
+    width: 300px;
+    height: 45px;
+    border-radius: 5rem;
+    font-size: 30px;
+    padding-left: 15px;
+    color: #ffffff;
+    font-family: Yoon독립체;
+    margin-left: 10px;
+    
+  
+    &::placeholder {
+      color: #ffffff;
+    }
+  
+    &:focus {
+      outline: none;
+    }
+    
 }
