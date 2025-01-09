@@ -13,7 +13,7 @@ function closeModal() {
 }
 
 function openFailModal() {
-  const modal = document.querySelector('.container_grading_overlay');
+  const modal = document.querySelector('.container_grading_fail_overlay');
   if (modal) {
     modal.style.display = 'flex'; 
   }
@@ -21,7 +21,7 @@ function openFailModal() {
 
 
 function closeFailModal() {
-  const modal = document.querySelector('.container_grading_overlay');
+  const modal = document.querySelector('.container_grading_fail_overlay');
   if (modal) {
     modal.style.display = 'none'; 
   }
