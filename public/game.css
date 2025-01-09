@@ -1,6 +1,6 @@
 @font-face {
   font-family: "YoonDokrip";
-  src: url("./font/YoonDokrip.otf");
+  src: url("font/YoonDokrip.otf");
   font-display: swap;
 }
 
@@ -58,17 +58,18 @@
 }
 .container_bag_quiz_content img {
   position: absolute;
-  width: 80px;
-  top: 50%;
-  left: 80%;
+  width: 70px;
+  top: 90%;
+  left: 10%;
 }
 
 .img_bagTop {
   position: absolute;
   top: 54%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
+  will-change: transform, opacity;
+  transform: translate(-50%, -50%) translateZ(0);
+  width: 60vw;
   animation: bagTopDown 0.1s linear forwards;
 }
 
@@ -168,7 +169,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 500px;
-  height: 87%;
   padding: 20px;
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -314,7 +314,7 @@ hr {
 
 .btn_submit {
   cursor: pointer;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   width: 88px;
   height: 44px;
 
@@ -328,4 +328,11 @@ hr {
   font-weight: 600;
   line-height: 2.5;
   box-shadow: 4px 4px 5px 2px rgba(0, 0, 0, 0.25);
+}
+
+a {
+  text-decoration-line: none;
+  &:visited {
+    color: #000000;
+  }
 }

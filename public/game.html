@@ -9,19 +9,21 @@
     />
     <meta name="keywords" content="IT, 개발, 게임, 퀴즈, 철가방, 띵호와" />
     <title>띵~호와🍜</title>
-    <link rel="icon" href="./img/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./index.css" />
-    <link rel="stylesheet" href="./game2.css" />
-    <link rel="preload" href="./img/bagTop.webp" as="image" type="image/webp" />
+    <link rel="icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="game.css" />
+    <link rel="preload" href="img/bagTop.webp" as="image" type="image/webp" />
+    <link rel="preload" href="../data/css.webp" as="image" type="image/webp" />
     <link
       rel="preload"
-      href="./data/python.webp"
-      as="image"
-      type="image/webp"
+      href="font/YoonDokrip.otf"
+      as="font"
+      type="font/otf"
+      crossorigin="anonymous"
     />
     <link
       rel="preload"
-      href="./font/YoonDokrip.otf"
+      href="font/YoonDokrip.otf"
       as="font"
       type="font/otf"
       crossorigin="anonymous"
@@ -29,15 +31,15 @@
   </head>
   <body>
     <audio autoplay>
-      <source src="./audio/quizBGM.mp3" type="audio/mpeg" />
+      <source src="audio/quizBGM.mp3" type="audio/mpeg" />
     </audio>
+
+    <input type="checkbox" id="show-modal" style="display: none" />
     <div class="container_warning">
       <div class="text_warning">1090px 이상 해상도만 이용 가능합니다✨🌈</div>
     </div>
 
-    <input type="checkbox" id="show-modal" style="display: none" />
-
-    <div class="container_overlay"></div>
+    <!-- <div class="container_overlay"></div>
     <div class="container_modal">
       <div class="container_modal_content">
         <div class="text_receipt">띵호와 결과 계산서</div>
@@ -53,19 +55,21 @@
       <div>
         <div class="text_score">4 / 10</div>
       </div>
-    </div>
+    </div> -->
 
     <div class="container_background">
-      <img src="./img/bag.svg" alt="철가방" class="img_bag" />
+      <img src="img/bag.svg" alt="철가방" class="img_bag" />
       <div class="container_bag_quiz_content" id="quiz-content">
-        <img src="./data/python.webp" alt="python" />
+        <img src="../data/css.webp" alt="css" />
       </div>
-      <img src="./img/bagTop.svg" alt="철가방 뚜껑" class="img_bagTop" />
+      <img src="img/bagTop.webp" alt="철가방 뚜껑" class="img_bagTop" />
       <div class="layout_content">
         <div class="text_quiz_title">철가방 속 이름은?</div>
         <input type="text" placeholder="철가방 속 이름은?" />
 
-        <label for="show-modal" class="btn_submit">제출</label>
+        <a href="./game2.html">
+          <div class="btn_submit">제출</div>
+        </a>
         <div class="timer"></div>
       </div>
     </div>
