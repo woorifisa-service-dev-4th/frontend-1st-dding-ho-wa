@@ -336,3 +336,29 @@ a {
     color: #000000;
   }
 }
+
+
+.container_grading_overlay, .container_grading_fail_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.img_correct, .img_fail{
+  background-color: transparent;
+}
+.grading_correct_modal , .grading_fail_modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  padding: 20px;
+  background-color:transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
