@@ -13,8 +13,7 @@ app.use(express.json());
 
 // lh:3-/로 접속 시 응답할 핸들러(엔드포인트)
 app.get('/', (_, response) => {
-  response.sendFile('test.html', { root: 'public' });
-  // response.sendFile('index.html');
+  response.sendFile('index.html');
 });
 
 let db;
