@@ -381,27 +381,45 @@ a {
 }
 
 
-.container_grading_overlay, .container_grading_fail_overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+.container_grading_overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; 
+    z-index: 1000 ;
+    border:none;
+}
+.container_grading_fail_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; 
+    z-index: 1000;
+    border:none;
 }
 .img_correct, .img_fail{
   background-color: transparent;
 }
-.grading_correct_modal , .grading_fail_modal{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500px;
-  padding: 20px;
-  background-color:transparent;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 2;
+.grading_correct_modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+} 
+.grading_fail_modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
 }
 

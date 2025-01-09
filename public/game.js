@@ -74,7 +74,7 @@ function closeModal() {
 }
 
 function openFailModal() {
-  const modal = document.querySelector('.container_grading_overlay');
+  const modal = document.querySelector('.container_grading_fail_overlay');
   if (modal) {
     modal.style.display = 'flex';
   }
@@ -82,7 +82,7 @@ function openFailModal() {
 
 
 function closeFailModal() {
-  const modal = document.querySelector('.container_grading_overlay');
+  const modal = document.querySelector('.container_grading_fail_overlay');
   if (modal) {
     modal.style.display = 'none';
   }
@@ -205,6 +205,11 @@ function generateJjajangImage() {
         const clickHandler = () => {
           correctCount++;
           console.log('정답! 현재 정답 수:', correctCount);
+          openModal('.container_grading_overlay');
+
+          setTimeout(() => {
+            closeModal('.container_grading_overlay'); 
+          }, 1000); 
           removeClickListeners(); // 클릭 리스너 제거
           resolve(); // Promise 해결
         };
@@ -244,6 +249,11 @@ function generateJjajangAndJjambbongImages() {
       if (image.alt === '짜장면') {
         const clickHandler1 = () => {
           correctCount++;
+          openModal('.container_grading_overlay');
+
+          setTimeout(() => {
+            closeModal('.container_grading_overlay'); 
+          }, 1000); 
           removeClickListeners(); // 클릭 리스너 제거
           resolve(); // Promise 해결
         };
@@ -251,6 +261,11 @@ function generateJjajangAndJjambbongImages() {
         clickHandlers.push({ element: image, handler: clickHandler1 });
       } else if (image.alt === '짬뽕') {
         const clickHandler2 = () => {
+          openFailModal('.container_fail_grading_overlay');
+
+          setTimeout(() => {
+            closeFailModal('.container_fail_grading_overlay'); 
+          }, 1000); 
           removeClickListeners(); // 클릭 리스너 제거
           resolve(); // Promise 해결
         };
