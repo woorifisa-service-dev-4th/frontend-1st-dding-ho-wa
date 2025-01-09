@@ -8,8 +8,6 @@ const app = express()
 const port = 3000
 app.use(express.static('public'));
 
-const CLIENT_ID = process.env.CLIENT_ID;
-const CLIENT_SECRET = process.env.CLIENT_SECRET;
 
 // lh:3-/로 접속 시 응답할 핸들러(엔드포인트)
 app.get('/', (_, response) => {
