@@ -160,17 +160,20 @@ HTML, CSS를 활용한 **철가방 속 물건 맞추기 게임**입니다.
 
 ### 이미지 및 폰트 preload 설정
 이미지와 폰트 로딩 지연을 해결하기 위해 미리 로드하게 해주는 preload를 적용하였습니다.
+
 ```html
-    <link rel="preload" href="./img/bagTop.webp" as="image" type="image/webp" />
-    <link rel="preload" href="./data/css.webp" as="image" type="image/webp" />
+
+<link rel="preload" href="public/img/bagTop.webp" as="image" type="image/webp" />
+<link rel="preload" href="./data/css.webp" as="image" type="image/webp" />
 ```
 
 ### CLS 방지를 위한 코드 추가
 웹폰트가 로딩될 때 대체 텍스트가 미리 띄워지고 웹폰트가 로드되면 교체하도록 해주는 `font-display: swap;`를 추가해주었습니다.
+
 ```css
 @font-face {
   font-family: "YoonDokrip";
-  src: url("./font/YoonDokrip.otf");
+  src: url("public/font/YoonDokrip.otf");
   font-display: swap;
 }
 ```

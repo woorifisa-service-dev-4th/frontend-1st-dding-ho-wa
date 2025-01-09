@@ -54,7 +54,7 @@ body {
 }
 
 .container_background {
-  background-image: url("./img/background.webp");
+  background-image: url("img/background.webp");
   background-repeat: repeat;
   background-size: 240px;
   width: 100%;
@@ -161,7 +161,7 @@ body {
 
 @font-face {
   font-family: "Yoon독립체";
-  src: url("./font/YoonDokrip.otf") format("truetype");
+  src: url("font/YoonDokrip.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
