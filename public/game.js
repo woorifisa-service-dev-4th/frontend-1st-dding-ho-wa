@@ -9,7 +9,34 @@ const slots = ['slot1', 'slot2', 'slot3'];
 // 이미지와 컨테이너 참조
 const imgBagTop = document.querySelector('.img_bagTop');
 const bagTopContainer = document.querySelector('.bag_top_container');
+function openModal() {
+  const modal = document.querySelector('.container_grading_overlay');
+  if (modal) {
+    modal.style.display = 'flex';
+  }
+}
 
+function closeModal() {
+  const modal = document.querySelector('.container_grading_overlay');
+  if (modal) {
+    modal.style.display = 'none';
+  }
+}
+
+function openFailModal() {
+  const modal = document.querySelector('.container_grading_overlay');
+  if (modal) {
+    modal.style.display = 'flex';
+  }
+}
+
+
+function closeFailModal() {
+  const modal = document.querySelector('.container_grading_overlay');
+  if (modal) {
+    modal.style.display = 'none';
+  }
+}
 // 이미지 크기를 가져와 컨테이너 크기 설정
 function setContainerSize() {
   console.log('setContainerSize');

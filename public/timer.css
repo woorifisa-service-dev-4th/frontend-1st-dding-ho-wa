@@ -1,12 +1,4 @@
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f4f4f4;
-}
+
 body img {
   width: 30px;
   height: 30px;
@@ -16,6 +8,7 @@ body img {
   width: 80%;
   max-width: 600px;
   text-align: center;
+
 }
 
 .progress-bar {

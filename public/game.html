@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="game.css" />
     <link rel="preload" href="img/bagTop.webp" as="image" type="image/webp" />
     <link rel="preload" href="../data/css.webp" as="image" type="image/webp" />
+    <link rel="stylesheet" href="timer.css">
+
     <link
       rel="preload"
       href="font/YoonDokrip.otf"
@@ -29,6 +31,8 @@
       crossorigin="anonymous"
     />
     <script defer src="game.js "></script>
+    <script defer src="timer.js"></script>
+
   </head>
   <body>
     <audio autoplay>
@@ -41,22 +45,25 @@
     </div>
 
 
-
-    
-    <div class="container_grading_overlay">
-      <div class="grading_correct_modal">
-        <img src="img/correct.png" width="500px" height="500px" class="img_correct">
+      <!--<div class="container_grading_overlay">
+        <div class="grading_correct_modal">
+          <img src="img/correct.png" width="500px" height="500px" class="img_correct">
+        </div>
       </div>
-    </div>
 
-    <div class="container_grading_fail_overlay_">
-      <div class="grading_fail_modal">
-        <img src="img/fail.png" width="500px" height="500px" class="img_fail">
-      </div>
-    </div>
+      <div class="container_grading_fail_overlay_">
+        <div class="grading_fail_modal">
+          <img src="img/fail.png" width="500px" height="500px" class="img_fail">
+        </div>
+    </div>-->
 
 
     <div class="container_background">
+      <img src="/img/bell.png">
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
       <img src="img/bag.svg" alt="철가방" class="img_bag" />
       <div class="container_bag_quiz_content" id="quiz-content">
 
