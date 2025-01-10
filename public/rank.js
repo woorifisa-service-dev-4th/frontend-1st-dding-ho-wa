@@ -40,7 +40,7 @@ const updateButtons = (page, totalPages) => {
 
 const fetchRankingData = async (page) => {
   try {
-    const response = await fetch(`http://localhost:3000/rank?page=${page}`);
+    const response = await fetch(`/rank?page=${page}`);
     const data = await response.json();
     if (data.success) {
       renderRanking(data.data, page);
