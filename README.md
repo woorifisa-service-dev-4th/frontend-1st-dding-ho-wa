@@ -1,4 +1,3 @@
-<img width="863" alt="image" src="https://github.com/user-attachments/assets/cae84704-706f-409d-a542-ed428ab11407" />
 # Frontend-1st-Dding-Ho-Wa
 
 
