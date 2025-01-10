@@ -1,0 +1,21 @@
+.container_modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: fit-content;
+  padding: 40px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container_modal_content {
+  text-align: center;
+  height: fit-content;
+}
+
+.container_overlay,
+.container_modal {
+  display: block;
+}

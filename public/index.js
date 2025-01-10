@@ -1,5 +1,4 @@
-let nickname = '';
-
+const nickname = '';
 
 document.addEventListener('DOMContentLoaded', () => {
   const startButton = document.getElementById('btn');
@@ -14,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('nickname', nickname);
     return true;
   };
-  console.log(startButton);
   // 버튼 클릭 이벤트
   startButton.addEventListener('click', (event) => {
     if (!saveNickname()) {

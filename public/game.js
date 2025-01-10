@@ -1,17 +1,10 @@
 // 이미지 배열 (랜덤으로 선택할 이미지)
-import {
-  resetProgressBar,
-  startProgressBar,
-} from './timer.js';
+import { resetProgressBar, startProgressBar } from './timer.js';
 import { saveResult } from './api/api.js';
 
 const bagTopElement = document.querySelector('.img_bagTop');
-bagTopElement.addEventListener('animationstart', () => {
-  console.log('애니메이션 시작');
-});
-bagTopElement.addEventListener('animationend', () => {
-  console.log('애니메이션 종료');
-});
+bagTopElement.addEventListener('animationstart', () => {});
+bagTopElement.addEventListener('animationend', () => {});
 let nickname;
 let correctCount = 0;
 const totalTime = 20;
@@ -43,17 +36,12 @@ function triggerBagTopAnimation() {
   void bagTopElement.offsetWidth;
   bagTopElement.style.animation = 'bagTopDown 2s ease-in-out forwards';
 
-  bagTopElement.addEventListener('animationstart', () => {
-    console.log('애니메이션 시작');
-  });
+  bagTopElement.addEventListener('animationstart', () => {});
 
   bagTopElement.addEventListener('animationend', () => {
-    console.log('애니메이션 종료');
     bagTopElement.classList.remove('bagTopDown');
   });
 }
-
-
 
 function openModal() {
   const modal = document.querySelector('.container_grading_overlay');
@@ -178,7 +166,6 @@ function generateJjajangImage() {
       if (image.alt === '짜장면') {
         const clickHandler = () => {
           correctCount++;
-          console.log('정답! 현재 정답 수:', correctCount);
 
           removeClickListeners();
           resolve();
@@ -190,7 +177,6 @@ function generateJjajangImage() {
 
     const timer = setTimeout(() => {
       removeClickListeners();
-
 
       resolve();
     }, 2000);
@@ -226,7 +212,6 @@ function generateJjajangAndJjambbongImages() {
         clickHandlers.push({ element: image, handler: clickHandler1 });
       } else if (image.alt === '짬뽕') {
         const clickHandler2 = () => {
-
           removeClickListeners();
           resolve();
         };
@@ -237,7 +222,6 @@ function generateJjajangAndJjambbongImages() {
 
     const timer = setTimeout(() => {
       removeClickListeners();
-
 
       resolve();
     }, 2000);
@@ -257,7 +241,6 @@ function generateNoImages() {
     const timer = setTimeout(() => {
       removeClickListener();
       correctCount++;
-
 
       resolve();
     }, 2000);
@@ -311,7 +294,7 @@ function callRandomFunctionsGameLoop() {
     timeElapsed++;
     if (timeElapsed >= timer) {
       clearInterval(interval);
-      console.log("Game Over - Time's up!");
+
       endGame();
     }
   }, 1000);
@@ -320,15 +303,13 @@ function callRandomFunctionsGameLoop() {
     if (timeElapsed < timer) {
       try {
         await callRandomFunction();
-        console.log(timeElapsed);
+
         if (timeElapsed < timer) {
-          console.log('animation called');
           triggerBagTopAnimation();
           iterate();
         }
       } catch (error) {
-        // ✅ catch 블록을 try 블록 바깥으로 이동
-        console.error('비동기 작업 중 오류 발생:', error);
+        console.error(error);
         clearInterval(interval);
       }
     }
@@ -338,9 +319,8 @@ function callRandomFunctionsGameLoop() {
     clearPreviousImages();
     localStorage.setItem('score', correctCount);
     try {
-      console.log(nickname);
       const result = await saveResult(nickname, correctCount);
-      console.log('API 호출 결과:', result);
+      window.location.href = 'result.html';
     } catch (error) {
       console.error('API 호출 실패:', error);
       alert('점수 저장 중 오류가 발생했습니다.');

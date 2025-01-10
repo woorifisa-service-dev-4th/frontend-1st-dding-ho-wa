@@ -1,4 +1,3 @@
-
 /**
  * POST 요청으로 점수 저장
  * @param {string} nickname - 유저 닉네임
@@ -13,8 +12,8 @@ export async function saveResult(nickname, score) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        nickname: nickname,
-        score: score,
+        nickname,
+        score,
       }),
     });
 
@@ -23,10 +22,10 @@ export async function saveResult(nickname, score) {
     }
 
     const data = await response.json();
-    console.log('Success:', data);
-    return data; // 필요한 경우 반환
+
+    return data;
   } catch (error) {
-    console.error('Error:', error);
-    throw error; // 에러를 호출한 함수로 전달
+    console.error(error);
+    throw error;
   }
 }

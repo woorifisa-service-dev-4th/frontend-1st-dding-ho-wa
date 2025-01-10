@@ -1,0 +1,218 @@
+@font-face {
+  font-family: 'YoonDokrip';
+  src: url('font/YoonDokrip.otf');
+  font-display: swap;
+}
+
+.container_background {
+  display: none;
+}
+
+@media (min-width: 1090px) {
+  .container_background {
+    display: block;
+  }
+
+  .container_warning {
+    display: none;
+  }
+}
+
+@media (max-width: 1089px) {
+  .text_warning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-size: 2rem;
+    color: #000000;
+  }
+}
+
+.container_modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: fit-content;
+  padding: 40px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container_modal_content {
+  text-align: center;
+  height: fit-content;
+}
+
+.text_receipt {
+  font-size: 40px;
+  font-weight: 400;
+  font-family: YoonDokrip;
+}
+.text_thank_msg {
+  margin-top: 57px;
+  font-size: 60px;
+  font-family: YoonDokrip;
+  color: #b01017;
+}
+
+.btn_restart {
+  cursor: pointer;
+  background-color: #fcc338;
+  color: #000000;
+  width: 160px;
+  height: 64px;
+  border: none;
+  margin-top: 50px;
+  margin-bottom: 2rem;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 52px;
+  box-shadow: 4px 4px 5px 2px rgba(0, 0, 0, 0.25);
+}
+
+.text_total {
+  font-size: 70px;
+  font-weight: 400;
+  font-family: 'YoonDokrip';
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.text_score {
+  font-size: 90px;
+  font-weight: 500;
+  text-align: end;
+  font-family: 'YoonDokrip';
+}
+
+hr {
+  margin-top: 30px;
+  border: 1px solid #000000;
+}
+
+.btn_submit {
+  cursor: pointer;
+  margin-bottom: 10px;
+  width: 88px;
+  height: 44px;
+
+  border-radius: 52px;
+  background: #fcc338;
+
+  color: #000;
+
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 2.5;
+  box-shadow: 4px 4px 5px 2px rgba(0, 0, 0, 0.25);
+}
+
+a {
+  text-decoration-line: none;
+  &:visited {
+    color: #000000;
+  }
+}
+
+.btn_container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.rank_list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+  align-items: center;
+}
+
+.rank {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+  font-size: 24px;
+  font-family: 'YoonDokrip';
+}
+
+.rank_num {
+  font-weight: bold;
+}
+
+/* Specific Rank Colors */
+.rank:nth-child(1) .rank_num,
+.rank:nth-child(1) .rank_name,
+.rank:nth-child(1) .rank_score {
+  color: gold;
+}
+
+.rank:nth-child(2) .rank_num,
+.rank:nth-child(2) .rank_name,
+.rank:nth-child(2) .rank_score {
+  color: silver;
+}
+
+.rank:nth-child(3) .rank_num,
+.rank:nth-child(3) .rank_name,
+.rank:nth-child(3).rank:nth-child(3) .rank_score {
+  color: #cd7f32; /* Bronze */
+}
+
+/* Rank Name and Score Styling */
+.rank_name,
+.rank_score {
+  color: black;
+}
+
+/* Button Styling */
+.btn_submit {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: black;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'YoonDokrip';
+  line-height: 2;
+}
+
+.btn_submit:hover {
+  background: #333;
+}
+
+.pagination_buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+#prevButton,
+#nextButton {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 22px;
+  font-weight: 700;
+
+  border-radius: 12px;
+  background: #fff;
+
+  box-shadow: 3px 4px 8.3px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+}
+
+#prevButton:disabled,
+#nextButton:disabled {
+  cursor: default;
+  opacity: 0.1;
+  box-shadow: none;
+}
