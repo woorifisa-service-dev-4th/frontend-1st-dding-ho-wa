@@ -1,4 +1,4 @@
-
+<img width="863" alt="image" src="https://github.com/user-attachments/assets/cae84704-706f-409d-a542-ed428ab11407" />
 # Frontend-1st-Dding-Ho-Wa
 
 
@@ -122,7 +122,10 @@ HTML, CSS를 활용한 **철가방 속 물건 맞추기 게임**입니다.
 
 ### Play 
 
-![play Image](https://github.com/user-attachments/assets/d50a0f6a-67e4-4fb8-927f-09f423aaa812)
+<img width="1501" alt="image" src="https://github.com/user-attachments/assets/cf653d6f-54cb-4ba0-9670-c7063eb6dcdb" />
+<img width="1501" alt="image" src="https://github.com/user-attachments/assets/6a56f696-5236-423f-ac21-3c47363a7c64" />
+<img width="1501" alt="image" src="https://github.com/user-attachments/assets/dbb33ac6-2092-4970-80e7-943d49c9760e" />
+
 
 <br>
 
