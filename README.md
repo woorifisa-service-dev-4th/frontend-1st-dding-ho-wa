@@ -12,9 +12,8 @@
 <br>
 
 ## 🖥️ 데모 링크 / 시연 영상
+- 애플리케이션은 [demo 링크](http://192.168.0.70:3000/index.html)에서 접근 가능합니다.
 
-- [**라이브 데모 링크🌐**](https://woorifisa-service-dev-4th.github.io/frontend-1st-dding-ho-wa/)
-  
 - **데스크탑 시연 링크**
   <br>
   [영상 링크](https://drive.google.com/file/d/1nkOxSpomxfZTtts0hjFCdzWdjitsXbR5/view?usp=drive_link)
