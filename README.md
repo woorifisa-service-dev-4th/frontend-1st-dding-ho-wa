@@ -172,7 +172,10 @@ HTML, CSS,JS를 활용한 **철가방 속 짜장면 클릭하기 게임**입니�
 
 ### Play 
 
-![play Image](https://github.com/user-attachments/assets/d50a0f6a-67e4-4fb8-927f-09f423aaa812)
+<img width="1501" alt="image" src="https://github.com/user-attachments/assets/cf653d6f-54cb-4ba0-9670-c7063eb6dcdb" />
+<img width="1501" alt="image" src="https://github.com/user-attachments/assets/6a56f696-5236-423f-ac21-3c47363a7c64" />
+<img width="1501" alt="image" src="https://github.com/user-attachments/assets/dbb33ac6-2092-4970-80e7-943d49c9760e" />
+
 
 <br>
 
