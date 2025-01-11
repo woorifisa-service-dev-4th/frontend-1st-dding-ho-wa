@@ -6,7 +6,7 @@
 | ![cy](https://avatars.githubusercontent.com/u/94633589?v=4)| ![sj](https://avatars.githubusercontent.com/u/105282117?v=4) | ![sy](https://avatars.githubusercontent.com/u/87513664?v=4) |
 |--------------------------------------|---------------------------------------|------------------------------------|
 | [서채연](https://github.com/seocylucky)| [이승준](https://github.com/sengjun0624) | [이소연](https://github.com/reed426) |
-| 팀장<br>HTML<br>Figma<br>CSS<br>LightHouse 측정 및 개선<br>GitHub세팅 | 팀원<br>HTML<br>CSS<br>README        | 팀원<br>HTML<br>CSS<br>Figma        |
+|HTML<br>CSS<br>JS<br>Figma<br>LightHouse 측정 및 개선<br>GitHub세팅 |HTML<br>CSS<br>JS<br>README |HTML<br>CSS<br>JS<br>Figma|
 
 
 <br>
@@ -16,12 +16,12 @@
 
 - **데스크탑 시연 링크**
   <br>
-  [영상 링크](https://drive.google.com/file/d/1nkOxSpomxfZTtts0hjFCdzWdjitsXbR5/view?usp=drive_link)
+  [영상 링크](https://drive.google.com/file/d/129rO1Ayz7i8HCZKUt1mW7-UlCUZTWTXr/view?usp=drive_link)
+  
 
 - **GIF**
-  <br>
-  
-![ezgif com-resize](https://github.com/user-attachments/assets/62745dd4-d314-40db-884b-a1628086d346)
+  <br>![2025-01-116 12 14-ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/77f09747-27f4-4cf5-ab26-08e853fa37f1)
+
 
 
 <br>
@@ -30,11 +30,12 @@
 ## 🍦 서비스 소개
 
 우리FISA 클라우드 서비스 개발 교과과정 토이 프로젝트로, <br>
-HTML, CSS,JS를 활용한 **철가방 속 짜장면 클릭하기 게임**입니다.
+HTML, CSS, JS를 활용한 **철가방 속 짜장면 클릭하기 게임**입니다.
+**당신의 순발력을 테스트해보세요!**
 
 <br>
 
-## ESlint
+## 🧸 ESlint
 ### 환경 설정
 
 - **`browser`**: 브라우저 환경을 지원합니다.
@@ -82,7 +83,6 @@ HTML, CSS,JS를 활용한 **철가방 속 짜장면 클릭하기 게임**입니�
 - 추후에 컴포넌트 분리를 고려하여 작성한 HTML 문서
 - 오디오를 활용해 게임의 몰입증가
 
-
 ### CSS
 - 다양한 애니메이션을 활용해 시각적 재미 요소 추가
 - 1090px 이상의 해상도만 이용할 수 있게 반응형 적용
@@ -98,8 +98,12 @@ HTML, CSS,JS를 활용한 **철가방 속 짜장면 클릭하기 게임**입니�
 
 <br>
 
-## MYSQL 방화벽 해제
+## 🔓MYSQL 방화벽 해제
 - 저희는 로컬에 배포된 MYSQL을 팀원이 모두 같이 사용했습니다. mysql의 방화벽을 해제하고, .env를 활용하여 DB 연결정보를 팀원과 표준화하여 같은 데이터베이스를 바라보고 작업할 수 있었습니다.
+
+<br>
+<br>
+
 ## Font 
 ### Font서체
 #### 독립체 - 레트로한 느낌과 철가방 컨셉에 맞는 폰트 선정
@@ -109,7 +113,7 @@ HTML, CSS,JS를 활용한 **철가방 속 짜장면 클릭하기 게임**입니�
 [![띵호와](https://github.com/user-attachments/assets/526049b5-fd84-4b06-bbf2-a7e96d1cca7a)](https://noonnu.cc/font_page/338#google_vignette)
 
 <br>
-
+<br>
 <br>
 
 ## 🚧 프로젝트 룰
