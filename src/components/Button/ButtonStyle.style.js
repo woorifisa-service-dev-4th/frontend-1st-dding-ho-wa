@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-export const GlobalStyles = styled.button`
-    .btn{
+export const ButtonStyles = styled.div`
+    .btn_yellow{
         cursor: pointer;
         background-color: #fcc338;
         color: #000000;
@@ -16,7 +16,45 @@ export const GlobalStyles = styled.button`
         border-radius: 52px;
         box-shadow: 4px 4px 5px 2px rgba(0, 0, 0, 0.25);
     }
-    .btn:hover {
+    .btn_yellow:hover {
         background-color: #e64a19;
     }
+    //돌아가기
+    .btn_black {
+        margin-top: 20px;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        background: black;
+        color: white;
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 2.5;
+        box-shadow: 4px 4px 5px 2px rgba(0, 0, 0, 0.25);
+    }
+    // 페이지 이동 버튼
+    .btn_black:hover {
+        background: #333;
+    }
+    .btn_prev , .btn_next{
+        cursor: pointer;
+        padding: 10px 20px;
+        font-size: 22px;
+        font-weight: 700;
+
+        border-radius: 12px;
+        background: #fff;
+
+        box-shadow: 3px 4px 8.3px 0px rgba(0, 0, 0, 0.25);
+        border: none;
+    }
+    .btn_prev:disabled,
+    .btn_next:disabled {
+        cursor: default;
+        opacity: 0.1;
+        box-shadow: none;
+    }
+
+
 `;
