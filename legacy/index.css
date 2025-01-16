@@ -247,14 +247,12 @@ input[type='checkbox']:checked + label {
 }
 
 .text_name_input {
-  font-family: Yoon독립체;
   font-size: 25px;
 }
 
 .text_team_name {
   display: flex;
   justify-content: end;
-  font-family: Yoon독립체;
   font-size: 20px;
   padding-bottom: 0.5rem;
 }
