@@ -199,17 +199,51 @@ src/
 <br><br>
 
 #### 스타일 라이브러리 - Styled Components
+Styled Components를 사용하여 컴포넌트를 만들어 매번 컴포넌트가 적힌 곳으로 돌아가 속성을 수정하거나 다른 컴포넌트로 분리하지 않고,
+props로 값을 받아서 하나의 컴포넌트로 여러가지 스타일의 컴포넌트를 만들도록 하였습니다. 
+
+- 예시) 버튼 컴포넌트
+
+ <img width="809" alt="스크린샷 2025-01-17 오전 8 37 58" src="https://github.com/user-attachments/assets/519a023f-e094-4c88-aa3e-819683acc616" />
+
+
+className을 props로 받아서 yellow, black, prev, next에 따라 스타일이 다른 버튼이 생성되도록 하였습니다.
+ <img width="436" alt="스크린샷 2025-01-17 오전 8 38 23" src="https://github.com/user-attachments/assets/1ef2a97b-45f3-4981-8a49-a29e7cef3ab5" /> 
+
+ 
+ <img width="424" alt="스크린샷 2025-01-17 오전 8 39 36" src="https://github.com/user-attachments/assets/670f4f3f-e9f8-47b8-93d4-d38b2c2abc26" />
+ <img width="329" alt="스크린샷 2025-01-17 오전 8 39 39" src="https://github.com/user-attachments/assets/20df9f09-f6cc-4880-89f6-078682a0faa2" />
+
 <br><br>
 
-#### 공통 컴포넌트화 ex (Button)
+#### 공통 컴포넌트화 ex (Button,Modal)
+재사용 가능한 버튼과 모달 부분을 공통 컴포넌트화 하였습니다. 
+- 모달
+<img width="1085" alt="스크린샷 2025-01-17 오전 8 47 07" src="https://github.com/user-attachments/assets/ccacf76c-0122-48fe-92bb-e4e9a41fce3e" />
+<img width="1440" alt="스크린샷 2025-01-17 오전 8 39 48" src="https://github.com/user-attachments/assets/c93c1351-c846-4715-a3ce-0d9fa5a867f3" />
+
+- 버튼
+<img width="424" alt="스크린샷 2025-01-17 오전 8 39 36" src="https://github.com/user-attachments/assets/7314ebd9-c069-41a8-84ac-b9b520d0eebf" />
+<img width="274" alt="스크린샷 2025-01-17 오전 8 38 59" src="https://github.com/user-attachments/assets/f0290fc5-53fc-4617-bcc7-106802ea2c37" />
+
 <br><br>
 
 #### 개별 컴포넌트 ex (WarningScreen)
+코드의 가독성과 Styled-component적용으로 분리할 수 있는 요소들을 개별 컴포넌트화 하였습니다.
+
+- WarningScreen
+  각 페이지가 일정크기 이하로 줄게 되면 WarningScreen이 뜨도록 개별 컴포넌트화 하여 각 페이지에 넣어 사용하였습니다.
+  <img width="736" alt="스크린샷 2025-01-17 오전 8 51 35" src="https://github.com/user-attachments/assets/e2c6b741-fdf5-4091-9166-6db973c1bde2" />
+
 <br><br>
 
 #### React-Helmet을 통한 SEO 최적화
 React-Helmet을 활용해 페이지별 <title>과 <meta> 태그를 동적으로 설정하여 SEO를 최적화했습니다.
 이를 통해 검색 엔진 크롤러가 각 페이지의 고유 정보를 인식할 수 있도록 구성했습니다.
+
+
+<img width="581" alt="스크린샷 2025-01-17 오전 8 44 44" src="https://github.com/user-attachments/assets/fded016b-a542-40da-8f16-77210f9bb88e" />
+
 <br><br><br><br>
 
 ### MYSQL 방화벽 해제
@@ -251,6 +285,7 @@ React-Helmet을 활용해 페이지별 <title>과 <meta> 태그를 동적으로 
 <img width="1501" alt="image" src="https://github.com/user-attachments/assets/cf653d6f-54cb-4ba0-9670-c7063eb6dcdb" />
 <img width="1501" alt="image" src="https://github.com/user-attachments/assets/6a56f696-5236-423f-ac21-3c47363a7c64" />
 <img width="1501" alt="image" src="https://github.com/user-attachments/assets/dbb33ac6-2092-4970-80e7-943d49c9760e" />
+<img width="1440" alt="스크린샷 2025-01-17 오전 8 39 48" src="https://github.com/user-attachments/assets/f36bf8fa-d20d-4377-9297-541aab1bddeb" />
 
 
 <br><br>
