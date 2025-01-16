@@ -1,14 +1,17 @@
 import React from 'react';
-import { ContainerModal, ContainerOverlay } from './Modal.style';
+import { createPortal } from 'react-dom';
+import { StyledContainerModal,  StyledContainerOverlay } from './Modal.style';
 
 
-export const Modal = ({children}) => {
-  return (
-      <ContainerOverlay>
-        <ContainerModal>
+export const Modal = ({children, isOpen, onClose}) => {
+  if(!isOpen) return null;
+  return createPortal(
+      <StyledContainerOverlay onClick={onClose}>
+        <StyledContainerModal>
           {children}
-        </ContainerModal>
-      </ContainerOverlay>
+        </StyledContainerModal>
+      </StyledContainerOverlay>
+      ,document.body
   )
 }
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ContainerOverlay = styled.div`
+export const StyledContainerOverlay = styled.div`
   position: fixed;
   width:100%;
   height:100%;
@@ -8,7 +8,7 @@ export const ContainerOverlay = styled.div`
   z-index:1;
 `;
 
-export const ContainerModal = styled.div`
+export const StyledContainerModal = styled.div`
   position : fixed;
   top: 50%;
   left: 50%;
