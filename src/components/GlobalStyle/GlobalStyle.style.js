@@ -23,7 +23,7 @@ export const GlobalStyles = createGlobalStyle`
       vertical-align: baseline;
     }
 
-    /* HTML5 display-role reset for older browsers */
+   
     article, aside, details, figcaption, figure,
     footer, header, hgroup, menu, nav, section {
       display: block;
@@ -49,7 +49,7 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const GlobalStyleContainer = styled.div`
-  z-index: -999;
+  z-index: 0;
   position: absolute;
   background-image: url(${backgroundImage});
   background-repeat: repeat;

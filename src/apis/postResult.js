@@ -4,7 +4,8 @@
  * @param {number} score - 점수
  * @returns {Promise} - API 응답 Promise
  */
-export async function saveResult(nickname, score) {
+
+export async function postResult(nickname, score) {
   try {
     const response = await fetch('/result', {
       method: 'POST',
@@ -16,10 +17,6 @@ export async function saveResult(nickname, score) {
         score,
       }),
     });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
 
     const data = await response.json();
 
