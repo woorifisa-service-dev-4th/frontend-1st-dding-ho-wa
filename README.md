@@ -5,6 +5,22 @@ HTML, CSS, JS,React를 활용한 **철가방 속 짜장면 클릭하기 게임**
 > <br>
 > **당신의 순발력을 테스트해보세요!**
 
+<br><br>
+## 목차
+- [👥 팀 소개](#-팀-소개)
+- [🖥️ 데모 링크 / 시연 영상](#️-데모-링크--시연-영상)
+- [🚧 프로젝트 룰](#-프로젝트-룰)
+  - [Color 🖍️](#color-️---철가방-게임의-동양풍-컬러를-살린-색-사용)
+  - [Commit Convention](#-commit-convention)
+  - [Branch Convention](#-branch-convention)
+- [💻 핵심 요소](#-핵심-요소)
+  - [HTML](#html)
+  - [CSS](#css)
+  - [JS](#js)
+  - [React](#react)
+- [Lighthouse](#lighthouse)
+- [Font](#font)
+- [🤖 Prototype](#-prototype)
 
 
 <br><br><br><br><br><br>
