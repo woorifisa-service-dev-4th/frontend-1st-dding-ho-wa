@@ -1,3 +1,6 @@
+import Modal from "../components/Modal/Modal";
+import "../index.css";
+
 export const Home = () => {
   return (
     <>
