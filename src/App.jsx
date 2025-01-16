@@ -7,7 +7,6 @@ import { GlobalStyle } from './components/GlobalStyle/GlobalStyle';
 function App() {
   return (
     <>
-      <GlobalStyle />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/game" element={<Game />} />
