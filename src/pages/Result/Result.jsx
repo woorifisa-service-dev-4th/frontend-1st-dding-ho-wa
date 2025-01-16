@@ -4,6 +4,8 @@ import { Button } from '../../components/Button/Button'
 import { useNavigate } from 'react-router-dom';
 import "./Result.css";  
 import Modal from '../../components/Modal/Modal';
+import { fetchRankings } from '../../apis/getResult';
+
 
 export const Result = () => {
   const navigate = useNavigate();
@@ -22,22 +24,23 @@ export const Result = () => {
   }, []);
 
   useEffect(() => {
-    const fetchRankingData = async (page) => {
+    const loadRankings = async () => {
       try {
-        const response = await fetch(`/rank?page=${page}`);
-        const data = await response.json();
+        const data = await fetchRankings(currentPage); 
+        console.log(data);
         if (data.success) {
           setRanks(data.data);
+          console.log(data.data);
           setTotalPages(data.totalPages);
         } else {
-          alert('데이터를 불러오는데 실패했습니다.');
+          alert(data.message || '데이터를 불러오는데 실패했습니다.');
         }
       } catch (error) {
-        console.error('데이터 불러오기 오류:', error);
+        console.error('데이터 로드 오류:', error.message);
       }
     };
 
-    fetchRankingData(currentPage);
+    loadRankings();
   }, [currentPage]);
 
   
@@ -59,7 +62,7 @@ export const Result = () => {
     return ranks.map((player, index) => {
       const overallIndex = (currentPage - 1) * limit + index + 1;
       return (
-        <div className="rank" key={overallIndex} data-rank={overallIndex} style={{ display: 'flex', marginBottom: '10px'}}>
+        <div className="rank" key={overallIndex} data-rank={overallIndex} style={{ display: 'flex', marginBottom: '10px' }}>
           <div className="rank_num">{`${overallIndex}등`}</div>
           <div className="rank_name">{player.nickname}</div>
           <div className="rank_score">{`${player.score}점`}</div>
