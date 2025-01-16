@@ -233,7 +233,9 @@ className을 props로 받아서 yellow, black, prev, next에 따라 스타일이
 
 - WarningScreen
   각 페이지가 일정크기 이하로 줄게 되면 WarningScreen이 뜨도록 개별 컴포넌트화 하여 각 페이지에 넣어 사용하였습니다.
-  <img width="736" alt="스크린샷 2025-01-17 오전 8 51 35" src="https://github.com/user-attachments/assets/e2c6b741-fdf5-4091-9166-6db973c1bde2" />
+
+
+  <img width="536" alt="스크린샷 2025-01-17 오전 8 51 35" src="https://github.com/user-attachments/assets/e2c6b741-fdf5-4091-9166-6db973c1bde2" />
 
 <br><br>
 
