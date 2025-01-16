@@ -1,4 +1,4 @@
-import { GlobalStyleContainer, GlobalStyles } from './GlobalStyle.stye';
+import { GlobalStyleContainer, GlobalStyles } from './GlobalStyle.style';
 
 export const GlobalStyle = ({ children }) => {
   return (

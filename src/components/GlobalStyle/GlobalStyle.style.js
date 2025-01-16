@@ -49,6 +49,8 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const GlobalStyleContainer = styled.div`
+  z-index: -999;
+  position: absolute;
   background-image: url(${backgroundImage});
   background-repeat: repeat;
   background-size: 240px;
