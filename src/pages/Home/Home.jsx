@@ -1,10 +1,10 @@
 import audio from '@/assets/audio/homeBGM.mp3';
-import { HomeLayoutStyle } from '../components/Home/HomeLayout.style.js';
-import HomeBody from '../components/Home/HomeBody.jsx';
-import Modal from '../components/Modal/Modal.jsx';
+import { HomeLayoutStyle } from '../../components/HomeLayout/HomeLayout.style.js';
+import HomeBody from '../../components/HomeBody/HomeBody.jsx';
+import Modal from '../../components/Modal/Modal.jsx';
 import { useState } from 'react';
-import ModalContent from '../components/Home/ModalContent.jsx';
-import { WarningScreen } from '../components/WarningScreen/WarningScreen.jsx';
+import ModalContent from '../../components/ModalContent/ModalContent.jsx';
+import { WarningScreen } from '../../components/WarningScreen/WarningScreen.jsx';
 export const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -17,10 +17,12 @@ export const Home = () => {
       <audio autoPlay>
         <source src={audio} type="audio/mpeg" />
       </audio>
-      <WarningScreen></WarningScreen>
+      <WarningScreen/>
+
       <HomeLayoutStyle>
         <HomeBody openModal={openModal}/>
       </HomeLayoutStyle>
+
       <Modal isOpen={isOpen} onClose={closeModal}>
         <ModalContent/>
       </Modal>
