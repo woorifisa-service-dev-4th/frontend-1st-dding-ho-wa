@@ -11,6 +11,7 @@ import {
 } from './Game.style';
 import Bag from '@/assets/img/bag.svg';
 import BagTop from '@/assets/img/bagTop.webp';
+import Audio from '@/assets/audio/quizBGM.mp3';
 import { useSaveResult } from '../../hooks/useSaveResult';
 
 export const Game = () => {
@@ -110,7 +111,7 @@ export const Game = () => {
   return (
     <>
       <audio autoPlay loop>
-        <source src="audio/quizBGM.mp3" type="audio/mpeg" />
+        <source src={Audio} type="audio/mpeg" />
       </audio>
 
       <WarningScreen />
