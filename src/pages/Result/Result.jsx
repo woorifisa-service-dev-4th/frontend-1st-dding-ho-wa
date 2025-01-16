@@ -27,10 +27,8 @@ export const Result = () => {
     const loadRankings = async () => {
       try {
         const data = await fetchRankings(currentPage); 
-        console.log(data);
         if (data.success) {
           setRanks(data.data);
-          console.log(data.data);
           setTotalPages(data.totalPages);
         } else {
           alert(data.message || '데이터를 불러오는데 실패했습니다.');
@@ -39,7 +37,6 @@ export const Result = () => {
         console.error('데이터 로드 오류:', error.message);
       }
     };
-
     loadRankings();
   }, [currentPage]);
 
