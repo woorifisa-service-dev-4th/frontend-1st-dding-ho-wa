@@ -56,4 +56,8 @@ export const GlobalStyleContainer = styled.div`
   background-size: 240px;
   width: 100%;
   height: 100vh;
+
+  font-family: 'YoonDokrip';
+  src: url('./assets/font/YoonDokrip.otf');
+  font-display: swap;
 `;
