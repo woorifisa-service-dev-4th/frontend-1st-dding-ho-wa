@@ -1,0 +1,66 @@
+hr {
+  margin-top: 20px;
+  border: 1px solid #000000;
+}
+
+.text_total {
+  font-size: 70px;
+  font-weight: 400;
+  margin-top: 20px;
+  color:#000000;
+}
+
+.text_score {
+  font-size: 90px;
+  font-weight: 500;
+  color:#000000;
+  text-align: end;
+}
+
+.text_receipt {
+  font-size: 50px;
+  font-family: 'YoonDokrip';
+  color:#000000;
+  font-weight: 400;
+}
+.text_thank_msg {
+  margin-top: 57px;
+  font-size: 50px;
+  color: #b01017;
+}
+
+.rank:nth-child(1) .rank_num,
+.rank:nth-child(1) .rank_name,
+.rank:nth-child(1) .rank_score {
+  color: gold;
+  font-family: 'YoonDokrip';
+  margin-inline: 10px;
+  font-size: 20px;
+}
+
+.rank:nth-child(2) .rank_num,
+.rank:nth-child(2) .rank_name,
+.rank:nth-child(2) .rank_score {
+  color: silver;
+  font-family: 'YoonDokrip';
+  margin-inline: 10px;
+  font-size: 20px;
+}
+.rank:nth-child(3) .rank_num,
+.rank:nth-child(3) .rank_name,
+.rank:nth-child(3).rank:nth-child(3) .rank_score {
+  color: #cd7f32; 
+  font-family: 'YoonDokrip';
+  margin-inline: 10px;
+  font-size: 20px;
+}
+
+.rank_name,
+.rank,
+.rank_num,
+.rank_score {
+  color: black;
+  font-family: 'YoonDokrip';
+  margin-inline: 10px;
+  font-size: 20px;
+}

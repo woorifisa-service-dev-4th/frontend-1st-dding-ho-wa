@@ -5,9 +5,14 @@ import { StyledContainerModal,  StyledContainerOverlay } from './Modal.style';
 
 export const Modal = ({children, isOpen, onClose}) => {
   if(!isOpen) return null;
+  const handleOverlayClick = (e) => {
+    if (onClose) {
+      onClose(e); // onClose가 전달되었을 때만 호출
+    }
+  };
   return createPortal(
-      <StyledContainerOverlay onClick={onClose}>
-        <StyledContainerModal>
+      <StyledContainerOverlay onClick={handleOverlayClick}>
+        <StyledContainerModal onClick={(e) => e.stopPropagation()}>
           {children}
         </StyledContainerModal>
       </StyledContainerOverlay>
