@@ -10,20 +10,14 @@
     <meta name="keywords" content="게임, 철가방, 짜장면, 짬뽕, 띵호와" />
     <title>띵~호와🍜</title>
     <link rel="stylesheet" href="./index.css" />
-    <link rel="preload" href="./img/bagTop.webp" as="image" type="image/webp" />
+    <!--<link rel="preload" href="./img/bagTop.webp" as="image" type="image/webp" />
     <link
       rel="preload"
       href="./img/home/right.webp"
       as="image"
       type="image/webp"
-    />
-    <link
-      rel="preload"
-      href="./font/YoonDokrip.otf"
-      as="font"
-      type="font/otf"
-      crossorigin="anonymous"
-    />
+    />-->
+
   </head>
 
   <body>
@@ -39,14 +33,9 @@
               <source src="./audio/homeBGM.mp3" type="audio/mpeg" />
             </audio>
 
-            <input type="checkbox" id="show-modal" style="display: none" />
-
             <div>
-              <div class="container_warning">
-                <div class="text_warning">
-                  1090px 이상 해상도만 이용 가능합니다✨🌈
-                </div>
-              </div>
+            //TODO Warning
+
               <div class="container_home">
                 <div class="container_background">
                   <div class="container_left">
@@ -100,48 +89,17 @@
 
         return (
           <>
-            <button
-              for="show-modal"
-              onClick={openModal}
-              className="start_button_home"
-            >
+            <Warning/>
+            <Button className="yellow" onClick={openModal}>
               게임 설명
-            </button>
-            {isOpen && (
-              <>
-                <div className="container_overlay" onClick={closeModal}></div>
-                <div className="container_modal">
-                  <div className="container_modal_content">
-                    <div className="text_description">게임 방법</div>
-                    <div>
-                      <p className="text_content_01">
-                        1. 시작하기를 누르자마자 철가방이 빠르게 닫힙니다.
-                      </p>
-                      <p className="text_content_02">
-                        2. 문제를 읽고 당신의 순발력을 테스트 해보세요.
-                      </p>
-                      <p className="text_content_03">
-                        3. 문제가 끝나면 당신의 점수와 순위가 나오게 됩니다.
-                      </p>
-                    </div>
-                    <div className="text_name_input">
-                      이름
-                      <input
-                        type="text"
-                        className="input_name"
-                        placeholder="당신의 이름은?"
-                      />
-                    </div>
-                    <a href="./game.html">
-                      <button id="btn" className="btn_game_start">
-                        시작하기
-                      </button>
-                    </a>
-                    <div className="text_team_name">제작 : 띵호와 팀</div>
-                  </div>
-                </div>
-              </>
+            </Button>
+
+            {isOpen && createPortal(
+              <Modal>
+
+              </Modal>
             )}
+
           </>
         );
       };
@@ -151,3 +109,40 @@
     </script>
   </body>
 </html>
+
+</>
+)}
+<!--
+
+
+<div className="container_overlay" onClick={closeModal}></div>
+<div className="container_modal">
+  <div className="container_modal_content">
+    <div className="text_description">게임 방법</div>
+    <div>
+      <p className="text_content_01">
+        1. 시작하기를 누르자마자 철가방이 빠르게 닫힙니다.
+      </p>
+      <p className="text_content_02">
+        2. 문제를 읽고 당신의 순발력을 테스트 해보세요.
+      </p>
+      <p className="text_content_03">
+        3. 문제가 끝나면 당신의 점수와 순위가 나오게 됩니다.
+      </p>
+    </div>
+    <div className="text_name_input">
+      이름
+      <input
+        type="text"
+        className="input_name"
+        placeholder="당신의 이름은?"
+      />
+    </div>
+    <a href="./game.html">
+      <button id="btn" className="btn_game_start">
+        시작하기
+      </button>
+    </a>
+    <div className="text_team_name">제작 : 띵호와 팀</div>
+  </div>
+</div>-->

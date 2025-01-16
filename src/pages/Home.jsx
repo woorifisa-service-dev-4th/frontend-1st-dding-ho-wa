@@ -1,10 +1,17 @@
 import Modal from "../components/Modal/Modal";
-import "../index.css";
+import audio from '@/assets/audio/homeBGM.mp3';
+import { HomeLayoutStyle } from '../components/Home/HomeLayout.style.js';
+import LeftBody from '../components/Home/LeftBody.jsx';
 
 export const Home = () => {
   return (
     <>
-      <div>홈화면입니다.</div>
+      <audio autoPlay>
+        <source src={audio} type="audio/mpeg" />
+      </audio>
+      <HomeLayoutStyle>
+        <LeftBody/>
+      </HomeLayoutStyle>
     </>
   );
 };
