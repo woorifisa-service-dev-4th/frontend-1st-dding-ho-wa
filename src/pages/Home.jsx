@@ -4,6 +4,7 @@ import HomeBody from '../components/Home/HomeBody.jsx';
 import Modal from '../components/Modal/Modal.jsx';
 import { useState } from 'react';
 import ModalContent from '../components/Home/ModalContent.jsx';
+import { WarningScreen } from '../components/WarningScreen/WarningScreen.jsx';
 export const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -16,6 +17,7 @@ export const Home = () => {
       <audio autoPlay>
         <source src={audio} type="audio/mpeg" />
       </audio>
+      <WarningScreen></WarningScreen>
       <HomeLayoutStyle>
         <HomeBody openModal={openModal}/>
       </HomeLayoutStyle>
