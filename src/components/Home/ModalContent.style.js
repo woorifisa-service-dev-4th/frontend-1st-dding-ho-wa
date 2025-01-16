@@ -5,16 +5,17 @@ export const ModalContentStyle = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 65%;
-    height: 65%;
+    width: fit-content;
+    height: fit-content;
     padding: 20px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 2;
-
-
+    
     .container_modal_content {
         text-align: center;
+        width: 100%;
+        height: 100%;
     }
 
     .btn_game_start {
@@ -40,23 +41,28 @@ export const ModalContentStyle = styled.div`
     .text_description {
         font-size: 60px;
         font-weight: 400;
-        font-family: Yoon독립체;
         margin-top: 1.5rem;
         margin-bottom: 3rem;
+        font-family: 'YoonDokrip';
+
     }
 
     .text_content_01,
     .text_content_02,
     .text_content_03 {
-        font-family: Yoon독립체;
+        width:700px;
         font-size: 25px;
         margin-top: 1rem;
         margin-bottom: 2rem;
         font-weight: lighter;
+        font-family: 'YoonDokrip';
+
     }
 
     .text_name_input {
         font-size: 25px;
+        font-family: 'YoonDokrip';
+
     }
 
     .text_team_name {
@@ -64,6 +70,7 @@ export const ModalContentStyle = styled.div`
         justify-content: end;
         font-size: 20px;
         padding-bottom: 0.5rem;
+        font-family: 'YoonDokrip';
     }
 
     .text_name_input input {
@@ -76,8 +83,15 @@ export const ModalContentStyle = styled.div`
         font-size: 30px;
         padding-left: 15px;
         color: #ffffff;
-        font-family: Yoon독립체;
         margin-left: 10px;
+        font-family: 'YoonDokrip';
+    }
+    &::placeholder {
+        color: #ffffff;
+    }
 
+    &:focus {
+        outline: none;
+    }
 
 `;

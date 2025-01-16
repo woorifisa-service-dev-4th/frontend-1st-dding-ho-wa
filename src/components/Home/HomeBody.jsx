@@ -3,11 +3,11 @@ import LeftBody from './LeftBody.jsx';
 import CenterBody from './CenterBody.jsx';
 import RightBody from './RightBody.jsx';
 
-const HomeBody = () => {
+const HomeBody = ({openModal}) => {
   return (
     <>
       <LeftBody />
-      <CenterBody />
+      <CenterBody openModal={openModal} />
       <RightBody />
     </>
 
