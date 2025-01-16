@@ -49,7 +49,7 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const GlobalStyleContainer = styled.div`
-  z-index: -999;
+  z-index: 0;
   position: absolute;
   background-image: url(${backgroundImage});
   background-repeat: repeat;
