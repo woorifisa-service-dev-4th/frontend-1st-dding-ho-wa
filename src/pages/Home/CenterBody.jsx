@@ -2,7 +2,7 @@ import React from 'react';
 import { CenterBodyStyle } from './CenterBody.style.js';
 import bag from '@/assets/img/bag.svg';
 import bagTop from '@/assets/img/bagTop.svg';
-import { Button } from '../Button/Button.jsx';
+import { Button } from '../../components/Button/Button.jsx';
 
 const CenterBody = ({openModal}) => {
   return (

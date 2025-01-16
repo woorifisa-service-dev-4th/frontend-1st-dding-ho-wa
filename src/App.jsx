@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { Home } from './pages/Home';
+import { Home } from './pages/Home/Home.jsx';
 import { Game } from './pages/Game/Game';
 import { Result } from './pages/Result/Result';
 import { GlobalStyle } from './components/GlobalStyle/GlobalStyle';
