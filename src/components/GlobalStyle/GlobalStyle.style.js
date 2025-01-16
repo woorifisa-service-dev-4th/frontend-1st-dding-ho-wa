@@ -22,7 +22,7 @@ export const GlobalStyles = createGlobalStyle`
       vertical-align: baseline;
     }
 
-    /* HTML5 display-role reset for older browsers */
+   
     article, aside, details, figcaption, figure,
     footer, header, hgroup, menu, nav, section {
       display: block;
@@ -49,14 +49,13 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const GlobalStyleContainer = styled.div`
-    z-index:0;
+    z-index: 0;
     position: absolute;
     background-image: url(${backgroundImage});
     background-repeat: repeat;
     background-size: 240px;
     width: 100%;
     height: 100vh;
-
     font-family: 'YoonDokrip';
     src: url('./assets/font/YoonDokrip.otf');
     font-display: swap;

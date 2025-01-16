@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { Home } from './pages/Home';
-import { Game } from './pages/Game';
+import { Game } from './pages/Game/Game';
 import { Result } from './pages/Result/Result';
 import { GlobalStyle } from './components/GlobalStyle/GlobalStyle';
 

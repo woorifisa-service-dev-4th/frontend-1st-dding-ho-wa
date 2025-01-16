@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import mysql from 'mysql2/promise';
 import cors from 'cors';
+import path from 'path';
 
 dotenv.config();
 
@@ -12,8 +13,8 @@ app.use(cors());
 app.use(express.json());
 
 // lh:3-/로 접속 시 응답할 핸들러(엔드포인트)
-app.get('/', (_, response) => {
-  response.sendFile('index.html');
+app.get('*', (_, response) => {
+  response.sendFile(path.resolve('dist', 'index.html'));
 });
 
 let db;
