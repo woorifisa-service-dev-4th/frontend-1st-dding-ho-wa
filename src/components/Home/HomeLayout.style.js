@@ -1,9 +1,11 @@
 import styled  from 'styled-components';
 
 export const HomeLayoutStyle = styled.div`
-  display: none;
+    display: none;
     
-  @media (min-width: 1090px) {
-    display: block;
-  }
+    height:100%;
+
+    @media (min-width: 1090px) {
+        display: flex;
+    }
 `;
