@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const ButtonStyles = styled.div`
+    z-index:2;
+    
     button{
         cursor: pointer;
     }

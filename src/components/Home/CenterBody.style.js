@@ -66,7 +66,6 @@ export const CenterBodyStyle = styled.div`
         font-size: 24px;
         transition: background-color 0.3s ease;
         box-shadow: 4px 4px 5px 2px rgba(0, 0, 0, 0.25);
-        z-index: 10;
         width: 170px;
         font-weight: 700;
         height: 56px;
@@ -81,5 +80,6 @@ export const CenterBodyStyle = styled.div`
     .start_button_home:hover {
         background-color: #e64a19;
     }
+
 
 `;

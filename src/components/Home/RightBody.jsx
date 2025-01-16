@@ -6,7 +6,7 @@ const RightBody = () => {
     <RightBodyStyle>
       <img src={rightDragon} alt="오른쪽  용" className="img_right" />
     </RightBodyStyle>
-  );
-};
+  )
+}
 
 export default RightBody;
