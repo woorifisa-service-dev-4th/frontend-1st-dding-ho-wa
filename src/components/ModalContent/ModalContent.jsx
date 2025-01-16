@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import { ModalContentStyle } from './ModalContent.style.js';
-import { Button } from '../../components/Button/Button.jsx';
+import { Button } from '../Button/Button.jsx';
 
 const ModalContent = () => {
   const [inputValue, setInputValue] = useState("");
