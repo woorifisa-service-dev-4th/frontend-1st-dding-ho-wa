@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const ButtonStyles = styled.div`
-    .btn_yellow{
+    button{
         cursor: pointer;
+    }
+    .btn_yellow{
         background-color: #fcc338;
         color: #000000;
         width: 170px;
@@ -38,20 +40,16 @@ export const ButtonStyles = styled.div`
         background: #333;
     }
     .btn_prev , .btn_next{
-        cursor: pointer;
         padding: 10px 20px;
         font-size: 22px;
         font-weight: 700;
-
         border-radius: 12px;
         background: #fff;
-
         box-shadow: 3px 4px 8.3px 0px rgba(0, 0, 0, 0.25);
         border: none;
     }
     .btn_prev:disabled,
     .btn_next:disabled {
-        cursor: default;
         opacity: 0.1;
         box-shadow: none;
     }

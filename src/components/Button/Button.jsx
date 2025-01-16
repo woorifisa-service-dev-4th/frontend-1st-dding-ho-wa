@@ -1,4 +1,4 @@
-import { ButtonStyles } from './ButtonStyle.style.js';
+import { ButtonStyles } from './Button.style.js';
 
 export const Button = ({ children, className, onClick, disabled }) => {
   return (
