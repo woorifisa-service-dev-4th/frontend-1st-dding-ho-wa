@@ -8,7 +8,6 @@ export async function fetchRankings(page) {
   try {
     const response = await fetch(`/rank?page=${page}`);
     const data = await response.json();
-
     return data;
   } catch (error) {
     console.error('❌ 데이터 가져오기 오류:', error.message);
