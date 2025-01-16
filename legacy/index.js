@@ -14,18 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
     return true;
   };
   // 버튼 클릭 이벤트
-  startButton.addEventListener('click', (event) => {
-    if (!saveNickname()) {
-      event.preventDefault();
-    }
-  });
+  // startButton.addEventListener('click', (event) => {
+  //   if (!saveNickname()) {
+  //     event.preventDefault();
+  //   }
+  // });
   // 엔터키 입력 이벤트
-  inputField.addEventListener('keypress', (event) => {
-    if (event.key === 'Enter') {
-      event.preventDefault(); // 기본 엔터키 동작 중단
-      if (saveNickname()) {
-        window.location.href = './game.html'; // 페이지 이동
-      }
-    }
-  });
+  // inputField.addEventListener('keypress', (event) => {
+  //   if (event.key === 'Enter') {
+  //     event.preventDefault(); // 기본 엔터키 동작 중단
+  //     if (saveNickname()) {
+  //       window.location.href = './game.html'; // 페이지 이동
+  //     }
+  //   }
+  // });
 });
