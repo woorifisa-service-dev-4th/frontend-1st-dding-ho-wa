@@ -81,8 +81,6 @@ export const Game = () => {
 
   const handleTimeEnd = async () => {
     setIsGameOver(true);
-    console.log(`Game Over! Your score: ${correctCount}`);
-    localStorage.setItem('score', correctCount);
 
     await saveResult(nickname, correctCount);
   };
@@ -90,7 +88,6 @@ export const Game = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       if (!isGameOver) {
-        console.log('문제 생성 및 애니메이션 실행');
         generateImages();
         triggerBagTopAnimation();
       }

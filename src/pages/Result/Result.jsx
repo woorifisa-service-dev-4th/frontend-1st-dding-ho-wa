@@ -1,11 +1,17 @@
-import React, { useEffect, useState } from 'react'
-import { StyledContainerReceipt, StyledPagenationButton, StyledRankedList, StyledReceiptTopContent, StyledResultButtonContainer, StyledScoreContainer } from './Result.style'
-import { Button } from '../../components/Button/Button'
+import React, { useEffect, useState } from 'react';
+import {
+  StyledContainerReceipt,
+  StyledPagenationButton,
+  StyledRankedList,
+  StyledReceiptTopContent,
+  StyledResultButtonContainer,
+  StyledScoreContainer,
+} from './Result.style';
+import { Button } from '../../components/Button/Button';
 import { useNavigate } from 'react-router-dom';
-import "./Result.css";  
+import './Result.css';
 import Modal from '../../components/Modal/Modal';
 import { fetchRankings } from '../../apis/getResult';
-
 
 export const Result = () => {
   const navigate = useNavigate();
@@ -40,8 +46,6 @@ export const Result = () => {
     loadRankings();
   }, [currentPage]);
 
-  
-
   const handlePrev = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
@@ -50,7 +54,6 @@ export const Result = () => {
 
   const handleNext = () => {
     if (currentPage < totalPages) {
-      
       setCurrentPage(currentPage + 1);
     }
   };
@@ -59,7 +62,12 @@ export const Result = () => {
     return ranks.map((player, index) => {
       const overallIndex = (currentPage - 1) * limit + index + 1;
       return (
-        <div className="rank" key={overallIndex} data-rank={overallIndex} style={{ display: 'flex', marginBottom: '10px' }}>
+        <div
+          className="rank"
+          key={overallIndex}
+          data-rank={overallIndex}
+          style={{ display: 'flex', marginBottom: '10px' }}
+        >
           <div className="rank_num">{`${overallIndex}등`}</div>
           <div className="rank_name">{player.nickname}</div>
           <div className="rank_score">{`${player.score}점`}</div>
@@ -67,13 +75,13 @@ export const Result = () => {
       );
     });
   };
-  
+
   const openModal = () => {
     setModalOpen(true);
-  }
+  };
   const closeModal = () => {
     setModalOpen(false);
-  }
+  };
   return (
     <>
       <StyledContainerReceipt>
@@ -81,17 +89,25 @@ export const Result = () => {
           <div className="text_receipt">띵호와 결과 계산서</div>
           <div className="text_thank_msg">감사합니다</div>
           <StyledResultButtonContainer>
-            <Button className='yellow' onClick={() => navigate('/')}>홈으로</Button>
-            <Button className='yellow' onClick={openModal}>랭킹보기</Button>
-            <Modal isOpen={isModalOpen} onClose={closeModal} >
+            <Button className="yellow" onClick={() => navigate('/')}>
+              홈으로
+            </Button>
+            <Button className="yellow" onClick={openModal}>
+              랭킹보기
+            </Button>
+            <Modal isOpen={isModalOpen} onClose={closeModal}>
               <div className="text_receipt">띵호와 랭킹표</div>
-              <StyledRankedList>
-                {renderRanking()}
-              </StyledRankedList>
+              <StyledRankedList>{renderRanking()}</StyledRankedList>
               <StyledPagenationButton>
-                <Button className='prev' onClick={handlePrev}>&lt;</Button>
-                <Button className='black' onClick={closeModal}>돌아가기</Button>
-                <Button className='next' onClick={handleNext}>&gt;</Button>
+                <Button className="prev" onClick={handlePrev}>
+                  &lt;
+                </Button>
+                <Button className="black" onClick={closeModal}>
+                  돌아가기
+                </Button>
+                <Button className="next" onClick={handleNext}>
+                  &gt;
+                </Button>
               </StyledPagenationButton>
             </Modal>
           </StyledResultButtonContainer>
@@ -103,7 +119,7 @@ export const Result = () => {
         </StyledScoreContainer>
       </StyledContainerReceipt>
     </>
-  )
-}
+  );
+};
 
-export default Result
+export default Result;
