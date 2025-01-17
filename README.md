@@ -235,7 +235,10 @@ className을 props로 받아서 yellow, black, prev, next에 따라 스타일이
 <br><br>
 
 #### 개별 컴포넌트 ex (WarningScreen)
-코드의 가독성과 Styled-component적용으로 분리할 수 있는 요소들을 개별 컴포넌트화 하였습니다.
+코드의 가독성과 Styled-component적용으로 페이지 내에서 분리할 수 있는 요소들을 개별 컴포넌트화 하였습니다.
+
+
+홈화면의 용부분, 철가방부분 게임부분의 타이머부분, 결과페이지의 영수증부분
 
 - WarningScreen
   각 페이지가 일정크기 이하로 줄게 되면 WarningScreen이 뜨도록 개별 컴포넌트화 하여 각 페이지에 넣어 사용하였습니다.
