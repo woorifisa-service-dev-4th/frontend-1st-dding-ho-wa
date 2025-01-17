@@ -206,6 +206,9 @@ props로 값을 받아서 하나의 컴포넌트로 여러가지 스타일의 �
 
 
  <img width="809" alt="스크린샷 2025-01-17 오전 8 37 58" src="https://github.com/user-attachments/assets/519a023f-e094-4c88-aa3e-819683acc616" />
+<img width="446" alt="스크린샷 2025-01-17 오전 9 08 04" src="https://github.com/user-attachments/assets/20932c91-b5bc-46bf-a470-309198b057c5" />
+
+
 
 
 className을 props로 받아서 yellow, black, prev, next에 따라 스타일이 다른 버튼이 생성되도록 하였습니다.
