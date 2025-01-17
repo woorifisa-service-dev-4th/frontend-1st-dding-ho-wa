@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import {
   StyledContainerReceipt,
   StyledPagenationButton,
@@ -12,6 +12,7 @@ import { useNavigate } from 'react-router-dom';
 import './Result.css';
 import Modal from '../../components/Modal/Modal';
 import { fetchRankings } from '../../apis/getResult';
+import { GameContext } from '../../context/GameProvider.jsx';
 
 export const Result = () => {
   const navigate = useNavigate();
@@ -21,9 +22,10 @@ export const Result = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const limit = 10;
-
+  const { correctCount } = useContext(GameContext);
   useEffect(() => {
-    const savedScore = localStorage.getItem('score');
+    const savedScore = correctCount;
+    console.log(savedScore);
     if (savedScore) {
       setScore(savedScore);
     }

@@ -317,7 +317,6 @@ function callRandomFunctionsGameLoop() {
 
   async function endGame() {
     clearPreviousImages();
-    localStorage.setItem('score', correctCount);
     try {
       const result = await saveResult(nickname, correctCount);
       window.location.href = 'result.html';

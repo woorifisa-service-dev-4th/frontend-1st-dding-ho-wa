@@ -1,3 +1,4 @@
+/*
 document.addEventListener('DOMContentLoaded', () => {
   const scoreElement = document.querySelector('.text_score');
   const savedScore = localStorage.getItem('score');
@@ -8,3 +9,4 @@ document.addEventListener('DOMContentLoaded', () => {
     scoreElement.textContent = '0';
   }
 });
+*/
