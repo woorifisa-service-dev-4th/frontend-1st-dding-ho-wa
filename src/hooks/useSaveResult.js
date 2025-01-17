@@ -1,21 +1,23 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { postResult } from '../apis/postResult';
+import { GameProvider } from '../context/GameProvider.jsx';
 
 export const useSaveResult = () => {
   const [res, setRes] = useState(null);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
-
+  // const [correctCount, setCorrectCount] = useState(GameProvider);
   const saveResult = async (nickname, score) => {
     try {
+      console.log('----scroe',score);
       const data = await postResult(nickname, score);
       setRes(data);
 
       if (data.success) {
         console.log('✅ 점수 저장 성공:', data);
         alert('점수가 성공적으로 저장되었습니다!');
-        navigate('/result');
+        navigate('/result',{state:data});
       } else {
         console.error('❌ 점수 저장 실패:', data.message);
         alert('점수 저장 중 문제가 발생했습니다.');

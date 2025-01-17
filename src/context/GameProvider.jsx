@@ -6,8 +6,8 @@ export const GameProvider = ({ children }) => {
   const [correctCount, setCorrectCount] = useState(0);
 
   return (
-    <GameContext.Provider value={{ correctCount, setCorrectCount }}>
+    <GameConGameProvidertext.Provider value={{ correctCount, setCorrectCount }}>
       {children}
-    </GameContext.Provider>
+    </GameConGameProvidertext.Provider>
   );
 };

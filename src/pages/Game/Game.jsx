@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useContext } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Timer } from '../../components/Timer/Timer';
 import { WarningScreen } from '../../components/WarningScreen/WarningScreen';
 import { SLOTS, IMAGES, TOTAL_TIME } from '../../constants/game_constant';
@@ -17,7 +17,7 @@ import { GameContext } from '../../context/GameProvider.jsx';
 
 export const Game = () => {
   const nickname = localStorage.getItem('nickname');
-  const { correctCount, setCorrectCount } = useContext(GameContext);
+  const [correctCount, setCorrectCount ] = useState(0);
   const [images, setImages] = useState([]);
   const [isGameOver, setIsGameOver] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -82,9 +82,9 @@ export const Game = () => {
 
   const handleTimeEnd = async () => {
     setIsGameOver(true);
-
     await saveResult(nickname, correctCount);
-  };
+
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import {
   StyledContainerReceipt,
   StyledPagenationButton,
@@ -8,7 +8,7 @@ import {
   StyledScoreContainer,
 } from './Result.style';
 import { Button } from '../../components/Button/Button';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './Result.css';
 import Modal from '../../components/Modal/Modal';
 import { fetchRankings } from '../../apis/getResult';
@@ -22,9 +22,11 @@ export const Result = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const limit = 10;
-  const { correctCount } = useContext(GameContext);
+  const location = useLocation();
+  const data = location.state
+
   useEffect(() => {
-    const savedScore = correctCount;
+    const savedScore = data.score;
     console.log(savedScore);
     if (savedScore) {
       setScore(savedScore);
@@ -117,7 +119,7 @@ export const Result = () => {
         </StyledReceiptTopContent>
         <StyledScoreContainer>
           <div className="text_total">SCORE</div>
-          <div className="text_score">{score}</div>
+          <div className="text_score">{data.score}</div>
         </StyledScoreContainer>
       </StyledContainerReceipt>
     </>
